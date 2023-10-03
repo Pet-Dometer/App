@@ -10,25 +10,6 @@ class HomeView extends StatefulWidget {
 
   static const routeName = '/home';
 
-/*  final Map pages = {
-    0: {
-      'title': const Text('News'),
-      'body': const NewsBodyView(),
-      'navItem': const BottomNavigationBarItem(
-        label: 'News',
-        icon: Icon(Icons.newspaper),
-      ),
-    },
-    1: {
-      'title': const Text('Gardens'),
-      'body': const GardensBodyView(),
-      'navItem': const BottomNavigationBarItem(
-        label: 'Gardens',
-        icon: Icon(Icons.yard_outlined),
-      ),
-    },
-  };*/
-
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -79,8 +60,6 @@ class _HomeViewState extends State<HomeView> {
             icon: Icon(Icons.done),
             label: 'Challenges',
           ),
-/*          widget.pages[0]['navItem'],
-          widget.pages[1]['navItem'],*/
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

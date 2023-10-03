@@ -1,3 +1,4 @@
+import 'package:app/src/pages/home_view.dart';
 import 'package:flutter/material.dart';
 
 class CreationView extends StatefulWidget {
@@ -61,7 +62,7 @@ class _CreationState extends State<CreationView> {
                       backgroundColor: Colors.black
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, HomeView.routeName);
                   },
                   child: const Text('Create'),
                 ),
