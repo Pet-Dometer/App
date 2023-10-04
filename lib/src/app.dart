@@ -1,6 +1,8 @@
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/home_view.dart';
 import 'package:app/src/pages/history.dart';
+import 'package:app/src/pages/pedometer.dart';
+import 'package:app/src/pages/challenges.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -71,10 +73,15 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
+                  case CreationView.routeName:
+                    return const CreationView();
                   case HomeView.routeName:
                     return HomeView();
                   case HistoryView.routeName:
                     return HistoryView();
+                    return const HomeView();
+                  case PedometerView.routeName:
+                    return const PedometerView();
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
                   case SampleItemDetailsView.routeName:
