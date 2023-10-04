@@ -1,5 +1,6 @@
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/home_view.dart';
+import 'package:app/src/pages/login_view.dart';
 import 'package:app/src/pages/history.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:app/src/pages/challenges.dart';
@@ -78,14 +79,13 @@ class MyApp extends StatelessWidget {
                   case HomeView.routeName:
                     return HomeView();
                   case HistoryView.routeName:
-                    return HistoryView();
                     return const HomeView();
                   case PedometerView.routeName:
                     return const PedometerView();
                   case ChallengeView.routeName:
                     return const ChallengeView();
                   default:
-                    return CreationView();
+                    return LoginView();
                 }
               },
             );
