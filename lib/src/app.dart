@@ -70,15 +70,19 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
+                  case CreationView.routeName:
+                    return const CreationView();
                   case HomeView.routeName:
                     return const HomeView();
+                  case PedometerView.routeName:
+                    return const PedometerView();
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
                   case SampleItemListView.routeName:
                   default:
-                    return PedometerView();
+                    return const PedometerView();
                 }
               },
             );

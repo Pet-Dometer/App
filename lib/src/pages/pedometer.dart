@@ -20,9 +20,8 @@ class _PedometerState extends State<PedometerView> {
               height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/background.png'),
-                  fit: BoxFit.fill
-                ),
+                    image: AssetImage('assets/images/background.png'),
+                    fit: BoxFit.fill),
               ),
               child: Column(
                 children: [
@@ -40,10 +39,128 @@ class _PedometerState extends State<PedometerView> {
               ),
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
+                const SizedBox(height: 20),
                 Image.asset('assets/images/moodbar.png', width: 200),
-                Row(
-                  
+                const SizedBox(height: 40),
+                const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Center(
+                                child: SizedBox(
+                                  height: 100,
+                                  width: 100,
+                                  child: CircularProgressIndicator(
+                                    strokeCap: StrokeCap.round,
+                                    strokeWidth: 10,
+                                    value: .25,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '4000',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Center(
+                          child: Text(
+                            'Steps',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(width: 30),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Center(
+                                child: SizedBox(
+                                  height: 100,
+                                  width: 100,
+                                  child: CircularProgressIndicator(
+                                    strokeCap: StrokeCap.round,
+                                    strokeWidth: 10,
+                                    value: .5,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '300',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Center(
+                          child: Text(
+                            'Calories',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(width: 30),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Center(
+                                child: SizedBox(
+                                  height: 100,
+                                  width: 100,
+                                  child: CircularProgressIndicator(
+                                    strokeCap: StrokeCap.round,
+                                    strokeWidth: 10,
+                                    value: .80,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '7',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Center(
+                          child: Text(
+                            'Miles',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(width: 30),
+                  ],
                 )
               ],
             )
