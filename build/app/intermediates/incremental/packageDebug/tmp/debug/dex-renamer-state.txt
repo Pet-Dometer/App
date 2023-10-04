@@ -1,4 +1,4 @@
-#Tue Oct 03 20:10:56 HST 2023
-base.0=C\:\\GitHub\\app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
+#Wed Oct 04 00:56:51 HST 2023
+base.0=C\:\\Users\\ecadi\\IdeaProjects\\app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
+path.0=classes.dex
