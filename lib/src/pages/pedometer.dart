@@ -34,10 +34,19 @@ class _PedometerState extends State<PedometerView> {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  Image.asset('assets/images/dog2.png', width: 300)
+                  Image.asset('assets/images/dog2.png', width: 300),
+                  Image.asset('assets/images/healthbar.png', width: 150),
                 ],
               ),
             ),
+            Column(
+              children: [
+                Image.asset('assets/images/moodbar.png', width: 200),
+                Row(
+                  
+                )
+              ],
+            )
           ],
         ),
       ),
