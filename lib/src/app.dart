@@ -1,5 +1,7 @@
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/home_view.dart';
+import 'package:app/src/pages/history.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -76,7 +78,7 @@ class MyApp extends StatelessWidget {
                     return const SampleItemDetailsView();
                   case SampleItemListView.routeName:
                   default:
-                    return CreationView();
+                    return HistoryView();
                 }
               },
             );
