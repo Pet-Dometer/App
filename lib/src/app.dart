@@ -1,7 +1,11 @@
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/home_view.dart';
 import 'package:app/src/pages/leader_board.dart';
+import 'package:app/src/pages/login_view.dart';
+import 'package:app/src/pages/history.dart';
 import 'package:app/src/pages/pedometer.dart';
+import 'package:app/src/pages/challenges.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -74,14 +78,13 @@ class MyApp extends StatelessWidget {
                   case CreationView.routeName:
                     return const CreationView();
                   case HomeView.routeName:
+                    return HomeView();
+                  case HistoryView.routeName:
                     return const HomeView();
                   case PedometerView.routeName:
                     return const PedometerView();
-                  case SettingsView.routeName:
-                    return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-                  case SampleItemListView.routeName:
+                  case ChallengeView.routeName:
+                    return const ChallengeView();
                   default:
                     return const LeaderBoardView();
                 }
