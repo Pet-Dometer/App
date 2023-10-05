@@ -10,7 +10,9 @@ class Details {
   Details(String this.challenge, String this.frequency, bool this.complete);
 
   String get completeChip => this.complete ? 'Complete' : 'Incomplete';
+
   Color get frequencyColor => setFrequencyColor();
+
   Color get challengeColor => setChallengeColor();
 
   Color setFrequencyColor() {
@@ -66,99 +68,72 @@ class _ChallengeState extends State<ChallengeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          Center(
-            child: new Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(height: 10),
-                Text(
-                  'Challenges',
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                ),
-                for(Details challenge in sampleChallenges)
-                  Padding(
-                    padding: EdgeInsets.only(left: 25.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Column(
+      body: ListView(children: <Widget>[
+        Center(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 10),
+              Text(
+                'Challenges',
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              ),
+              for (Details challenge in sampleChallenges)
+                Padding(
+                  padding: EdgeInsets.only(left: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Column(children: <Widget>[
+                            Icon(
+                              Icons.emoji_events,
+                              color: Color(0xFFFFD600),
+                              size: 100,
+                            ),
+                          ]),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                challenge.challenge,
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    fontStyle: FontStyle.italic),
+                              ),
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
-                                  Icon(
-                                    Icons.emoji_events,
-                                    color: Color(0xFFFFD600),
-                                    size: 100,
-                                  ),
-                                ]
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  challenge.challenge,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FontStyle.italic
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Chip(
-                                        label: new Text(challenge.completeChip),
-                                        backgroundColor: challenge.challengeColor
-                                    ),
-                                    SizedBox(width: 10),
-                                    Chip(
-                                        label: new Text(challenge.frequency),
-                                        backgroundColor: challenge.frequencyColor
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                                  Chip(
+                                      label: new Text(challenge.completeChip),
+                                      backgroundColor:
+                                          challenge.challengeColor),
+                                  SizedBox(width: 10),
+                                  Chip(
+                                      label: new Text(challenge.frequency),
+                                      backgroundColor:
+                                          challenge.frequencyColor),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-              ],
-            ),
+                ),
+            ],
           ),
-        ]
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // needed when more than 3 items
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_outlined),
-            label: 'History',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star_border_outlined),
-            label: 'Leaderboard',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.done),
-            label: 'Challenges',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
+        ),
+      ]),
     );
   }
 }

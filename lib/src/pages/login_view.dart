@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:app/src/pages/creation.dart';
 
 /// Top-level Layout for all of the "Home" related
 class LoginView extends StatefulWidget {
@@ -102,8 +103,7 @@ class _LoginViewState extends State<LoginView> {
                   foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.pop(context);
-                },
+                  Navigator.pushNamed(context, CreationView.routeName);                },
                 child: Text('Login'),
               ),
             ),

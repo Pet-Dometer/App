@@ -1,4 +1,5 @@
 import 'package:app/src/pages/creation.dart';
+import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/home_view.dart';
 import 'package:app/src/pages/leader_board.dart';
 import 'package:app/src/pages/login_view.dart';
@@ -75,18 +76,22 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
+                  case ChallengeView.routeName:
+                    return const ChallengeView();
                   case CreationView.routeName:
                     return const CreationView();
-                  case HomeView.routeName:
-                    return const HomeView();
                   case HistoryView.routeName:
                     return const HistoryView();
+                  case HomeView.routeName:
+                    return HomeView();
+                  case LeaderBoardView.routeName:
+                    return const LeaderBoardView();
                   case PedometerView.routeName:
                     return const PedometerView();
                   case ChallengeView.routeName:
                     return const ChallengeView();
                   default:
-                    return const LeaderBoardView();
+                    return const LoginView();
                 }
               },
             );
