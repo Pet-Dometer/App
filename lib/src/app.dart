@@ -89,7 +89,7 @@ class MyApp extends StatelessWidget {
                   case PedometerView.routeName:
                     return const PedometerView();
                   case SettingsView.routeName:
-                    return const SettingsView();
+                    
                   default:
                     return const LoginView();
                 }
