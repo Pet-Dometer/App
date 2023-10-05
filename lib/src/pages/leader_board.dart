@@ -21,7 +21,7 @@ class _LeaderBoardState extends State<LeaderBoardView> {
               const SizedBox(height: 20),
               const Center(
                 child: Text(
-                  'Leaderboard',
+                  'History',
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 ),
               ),

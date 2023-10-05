@@ -74,7 +74,7 @@ class _ChallengeState extends State<ChallengeView> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Text(
                 'Challenges',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),

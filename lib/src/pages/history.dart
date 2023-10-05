@@ -75,7 +75,7 @@ class HistoryView extends StatefulWidget {
 class _HistoryState extends State<HistoryView> {
   final _usernameController = TextEditingController();
 
-  int activeButtonIndex = 0; // Initially no button is active
+  int activeButtonIndex = -1; // Initially no button is active
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -113,7 +113,7 @@ class _HistoryState extends State<HistoryView> {
                 'History',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -135,13 +135,15 @@ class _HistoryState extends State<HistoryView> {
               ),
               SizedBox(height: 20),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: [
                         for (Stats stats in myStats)
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Column(children: <Widget>[

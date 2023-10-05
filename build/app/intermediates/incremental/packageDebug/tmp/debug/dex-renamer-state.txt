@@ -1,4 +1,4 @@
-#Wed Oct 04 22:12:49 HST 2023
-base.0=C\:\\Users\\juuuu\\OneDrive\\Documents\\GitHub\\cl_calc\\app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
+#Wed Oct 04 20:05:00 HST 2023
+base.0=C\:\\GitHub\\app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
+renamed.0=classes.dex
