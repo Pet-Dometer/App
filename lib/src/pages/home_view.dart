@@ -69,17 +69,6 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       // drawer: const DrawerView(),
-      appBar: AppBar(
-        title: const Text('Home'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              Navigator.restorablePushNamed(context, SettingsView.routeName);
-            },
-          ),
-        ],
-      ),
       body: widget.pages[_selectedIndex]['body'],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, // needed when more than 3 items
