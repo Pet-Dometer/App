@@ -1,5 +1,6 @@
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/home_view.dart';
+import 'package:app/src/pages/leader_board.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -82,7 +83,7 @@ class MyApp extends StatelessWidget {
                     return const SampleItemDetailsView();
                   case SampleItemListView.routeName:
                   default:
-                    return const PedometerView();
+                    return const LeaderBoardView();
                 }
               },
             );
