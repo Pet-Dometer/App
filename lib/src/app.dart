@@ -78,9 +78,9 @@ class MyApp extends StatelessWidget {
                   case CreationView.routeName:
                     return const CreationView();
                   case HomeView.routeName:
-                    return HomeView();
-                  case HistoryView.routeName:
                     return const HomeView();
+                  case HistoryView.routeName:
+                    return const HistoryView();
                   case PedometerView.routeName:
                     return const PedometerView();
                   case ChallengeView.routeName:
