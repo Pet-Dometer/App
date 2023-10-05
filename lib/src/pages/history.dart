@@ -75,7 +75,7 @@ class HistoryView extends StatefulWidget {
 class _HistoryState extends State<HistoryView> {
   final _usernameController = TextEditingController();
 
-  int activeButtonIndex = -1; // Initially no button is active
+  int activeButtonIndex = 1; // Initially no button is active
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {

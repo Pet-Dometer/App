@@ -18,10 +18,10 @@ class _LeaderBoardState extends State<LeaderBoardView> {
         child: SafeArea(
           child: ListView(
             children: <Widget>[
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               const Center(
                 child: Text(
-                  'History',
+                  'Leaderboard',
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 ),
               ),
