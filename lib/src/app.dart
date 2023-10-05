@@ -88,8 +88,8 @@ class MyApp extends StatelessWidget {
                     return const LeaderBoardView();
                   case PedometerView.routeName:
                     return const PedometerView();
-                  case ChallengeView.routeName:
-                    return const ChallengeView();
+                  case SettingsView.routeName:
+                    return const SettingsView();
                   default:
                     return const LoginView();
                 }
