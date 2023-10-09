@@ -1,67 +1,6 @@
 import 'package:flutter/material.dart';
-
-class Stats {
-  String _title = '';
-  double _value = 0.0;
-  int _goal = 0;
-
-  Stats(this._title, this._value, this._goal);
-
-  double getProgress() {
-    return (this._value / this._goal) * 100;
-  }
-
-  String get title => _title;
-
-  double get value => _value;
-
-  int get goal => _goal;
-
-  double get progress => (this._value / this._goal);
-}
-
-class DayButton extends StatelessWidget {
-  String day = '';
-  int index = 0;
-  Function(int) setActive;
-  bool isActive = false;
-
-  DayButton(
-      {required this.day,
-      required this.index,
-      required this.isActive,
-      required this.setActive});
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        setActive(index);
-      },
-      child: Text(
-        day,
-        style: isActive
-            ? TextStyle(color: Colors.white)
-            : TextStyle(color: Colors.black),
-      ),
-      style: isActive
-          ? ElevatedButton.styleFrom(
-              shape: CircleBorder(),
-              elevation: 0,
-              padding: EdgeInsets.all(5),
-              primary: Colors.pink,
-              // Change color for active button
-              foregroundColor: null)
-          : ElevatedButton.styleFrom(
-              shape: CircleBorder(),
-              elevation: 0,
-              padding: EdgeInsets.all(5),
-              primary: Colors.white, // Change color for non-active button
-              // foregroundColor: null
-            ),
-    );
-  }
-}
+import '../widgets/stats.dart';
+import '../widgets/days.dart';
 
 class HistoryView extends StatefulWidget {
   const HistoryView({Key? key}) : super(key: key);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/user.dart';
 
 class LeaderBoardView extends StatefulWidget {
   const LeaderBoardView({Key? key}) : super(key: key);
@@ -10,6 +11,40 @@ class LeaderBoardView extends StatefulWidget {
 }
 
 class _LeaderBoardState extends State<LeaderBoardView> {
+
+  List<User> myUsers = [
+    User(
+      image: 'assets/images/dog2.png',
+      name: 'User 2',
+      level: 11,
+      steps: 66221,
+    ),
+    User(
+      image: 'assets/images/dog2.png',
+      name: 'User 3',
+      level: 9,
+      steps: 52233,
+    ),
+    User(
+      image: 'assets/images/dog2.png',
+      name: 'User 4',
+      level: 7,
+      steps: 42134,
+    ),
+    User(
+      image: 'assets/images/dog2.png',
+      name: 'User 5',
+      level: 6,
+      steps: 31513,
+    ),
+    User(
+      image: 'assets/images/dog2.png',
+      name: 'User 6',
+      level: 4,
+      steps: 22131,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,41 +60,13 @@ class _LeaderBoardState extends State<LeaderBoardView> {
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 ),
               ),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 1 [13]'),
-                subtitle: const Text('77273 Steps'),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 2 [11]'),
-                subtitle: const Text('66221 Steps'),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 3 [9]'),
-                subtitle: const Text('52233 Steps'),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 4 [7]'),
-                subtitle: const Text('42134 Steps'),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 5 [6]'),
-                subtitle: const Text('31513 Steps'),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Image.asset('assets/images/dog2.png'),
-                title: const Text('User 6 [4]'),
-                subtitle: const Text('22131 Steps'),
-              ),
+              for (User user in myUsers)
+                User(
+                  image: user.image,
+                  name: user.name,
+                  level: user.level,
+                  steps: user.steps
+                ),
             ],
           ),
         ),
