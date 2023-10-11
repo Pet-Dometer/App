@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/pedometer_circles.dart';
 
 class PedometerView extends StatefulWidget {
   const PedometerView({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class PedometerView extends StatefulWidget {
 }
 
 class _PedometerState extends State<PedometerView> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,116 +51,11 @@ class _PedometerState extends State<PedometerView> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          width: 100,
-                          child: Stack(
-                            children: <Widget>[
-                              Center(
-                                child: SizedBox(
-                                  height: 100,
-                                  width: 100,
-                                  child: CircularProgressIndicator(
-                                    strokeCap: StrokeCap.round,
-                                    strokeWidth: 10,
-                                    value: .25,
-                                  ),
-                                ),
-                              ),
-                              Center(
-                                child: Text(
-                                  '4000',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Center(
-                          child: Text(
-                            'Steps',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        )
-                      ],
-                    ),
+                    ProgressCircle('Steps', 0.25, 4000),
                     SizedBox(width: 30),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          width: 100,
-                          child: Stack(
-                            children: <Widget>[
-                              Center(
-                                child: SizedBox(
-                                  height: 100,
-                                  width: 100,
-                                  child: CircularProgressIndicator(
-                                    strokeCap: StrokeCap.round,
-                                    strokeWidth: 10,
-                                    value: .5,
-                                  ),
-                                ),
-                              ),
-                              Center(
-                                child: Text(
-                                  '300',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Center(
-                          child: Text(
-                            'Calories',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        )
-                      ],
-                    ),
+                    ProgressCircle('Calories', .5, 300),
                     SizedBox(width: 30),
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 100,
-                          width: 100,
-                          child: Stack(
-                            children: <Widget>[
-                              Center(
-                                child: SizedBox(
-                                  height: 100,
-                                  width: 100,
-                                  child: CircularProgressIndicator(
-                                    strokeCap: StrokeCap.round,
-                                    strokeWidth: 10,
-                                    value: .80,
-                                  ),
-                                ),
-                              ),
-                              Center(
-                                child: Text(
-                                  '7',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Center(
-                          child: Text(
-                            'Miles',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        )
-                      ],
-                    ),
+                    ProgressCircle('Miles', .8, 7),
                     SizedBox(width: 30),
                   ],
                 )
