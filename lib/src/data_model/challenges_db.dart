@@ -3,13 +3,13 @@ class ChallengeData {
   ChallengeData({
     required this.id,
     required this.frequency,
-    required this.title,
+    required this.challenge,
     required this.complete,
   });
 
   String id;
   String frequency;
-  String title;
+  String challenge;
   bool complete;
 }
 
@@ -19,19 +19,19 @@ class ChallengesDB {
     ChallengeData(
       id: 'challenge-001',
       frequency: 'Daily',
-      title: 'Walk 10k steps',
+      challenge: 'Walk 10k steps',
       complete: false,
     ),
     ChallengeData(
       id: 'challenge-002',
       frequency: 'Weekly',
-      title: 'Walk 70k steps',
+      challenge: 'Walk 70k steps',
       complete: false,
     ),
     ChallengeData(
       id: 'challenge-003',
       frequency: 'Monthly',
-      title: 'Walk 50 miles',
+      challenge: 'Walk 50 miles',
       complete: false,
     ),
   ];
