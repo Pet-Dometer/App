@@ -1,5 +1,3 @@
-import 'package:app/src/data_model/pet_db.dart';
-
 /// The data associated with users.
 class UserData {
   UserData({
