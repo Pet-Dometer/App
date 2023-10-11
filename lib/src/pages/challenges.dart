@@ -1,6 +1,5 @@
-import 'package:app/src/pages/home_view.dart';
 import 'package:flutter/material.dart';
-import '../widgets/challenge.dart';
+import '../widgets/challenge_details.dart';
 
 class ChallengeView extends StatefulWidget {
   const ChallengeView({Key? key}) : super(key: key);
@@ -12,17 +11,6 @@ class ChallengeView extends StatefulWidget {
 }
 
 class _ChallengeState extends State<ChallengeView> {
-  final _usernameController = TextEditingController();
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    if (index != _selectedIndex) {
-      setState(() {
-        _selectedIndex = index;
-      });
-    }
-  }
-
   List<Details> sampleChallenges = [
     Details('Walk 500k steps', 'Daily', false),
     Details('Walk 50k steps', 'Weekly', true),
@@ -40,12 +28,12 @@ class _ChallengeState extends State<ChallengeView> {
     return Scaffold(
       body: ListView(children: <Widget>[
         Center(
-          child: new Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                 'Challenges',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
