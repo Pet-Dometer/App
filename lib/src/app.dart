@@ -7,6 +7,7 @@ import 'package:app/src/pages/history.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/sign_up.dart';
+import 'package:app/src/pages/forgot_password.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -93,6 +94,8 @@ class MyApp extends StatelessWidget {
                     return SettingsView(controller: settingsController);
                   case SignupView.routeName:
                     return const SignupView();
+                  case ForgotPasswordView.routeName:
+                    return const ForgotPasswordView();
                   default:
                     return const LoginView();
                 }

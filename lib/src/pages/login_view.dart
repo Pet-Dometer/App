@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/sign_up.dart';
+import 'package:app/src/pages/forgot_password.dart';
 
 /// Top-level Layout for all of the "Home" related
 class LoginView extends StatefulWidget {
@@ -85,7 +86,8 @@ class _LoginViewState extends State<LoginView> {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              print('forgot password clicked');
+                              Navigator.pushNamed(
+                                  context, ForgotPasswordView.routeName);
                             }),
                     ]),
                   ),
