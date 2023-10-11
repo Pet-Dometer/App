@@ -1,32 +1,30 @@
-import 'package:app/src/pages/home_view.dart';
 import 'package:flutter/material.dart';
 
 class Details {
   String challenge;
   String frequency;
-  Color _color = Colors.lightBlue;
   bool complete;
 
-  Details(String this.challenge, String this.frequency, bool this.complete);
+  Details(this.challenge, this.frequency, this.complete);
 
-  String get completeChip => this.complete ? 'Complete' : 'Incomplete';
+  String get completeChip => complete ? 'Complete' : 'Incomplete';
 
   Color get frequencyColor => setFrequencyColor();
 
   Color get challengeColor => setChallengeColor();
 
   Color setFrequencyColor() {
-    if (this.frequency == 'Weekly') {
-      return Color(0xFF4FC3F7);
-    } else if (this.frequency == 'Monthly') {
-      return Color(0xFFEF9A9A);
+    if (frequency == 'Weekly') {
+      return const Color(0xFF4FC3F7);
+    } else if (frequency == 'Monthly') {
+      return const Color(0xFFEF9A9A);
     }
-    return Color(0xFFB39DDB);
+    return const Color(0xFFB39DDB);
   }
 
   Color setChallengeColor() {
-    if (this.complete) {
-      return Color(0xFF81C784);
+    if (complete) {
+      return const Color(0xFF81C784);
     }
     return Colors.grey;
   }
@@ -42,17 +40,6 @@ class ChallengeView extends StatefulWidget {
 }
 
 class _ChallengeState extends State<ChallengeView> {
-  final _usernameController = TextEditingController();
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    if (index != _selectedIndex) {
-      setState(() {
-        _selectedIndex = index;
-      });
-    }
-  }
-
   List<Details> sampleChallenges = [
     Details('Walk 500k steps', 'Daily', false),
     Details('Walk 50k steps', 'Weekly', true),
@@ -70,25 +57,25 @@ class _ChallengeState extends State<ChallengeView> {
     return Scaffold(
       body: ListView(children: <Widget>[
         Center(
-          child: new Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                 'Challenges',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
               for (Details challenge in sampleChallenges)
                 Padding(
-                  padding: EdgeInsets.only(left: 25.0),
+                  padding: const EdgeInsets.only(left: 25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          Column(children: <Widget>[
+                          const Column(children: <Widget>[
                             Icon(
                               Icons.emoji_events,
                               color: Color(0xFFFFD600),
@@ -101,24 +88,24 @@ class _ChallengeState extends State<ChallengeView> {
                             children: <Widget>[
                               Text(
                                 challenge.challenge,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w500,
                                     fontStyle: FontStyle.italic),
                               ),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
                                   Chip(
-                                      label: new Text(challenge.completeChip),
+                                      label: Text(challenge.completeChip),
                                       backgroundColor:
                                           challenge.challengeColor),
-                                  SizedBox(width: 10),
+                                  const SizedBox(width: 10),
                                   Chip(
-                                      label: new Text(challenge.frequency),
+                                      label: Text(challenge.frequency),
                                       backgroundColor:
                                           challenge.frequencyColor),
                                 ],
