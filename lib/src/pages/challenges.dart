@@ -1,3 +1,4 @@
+import 'package:app/src/data_model/challenges_db.dart';
 import 'package:flutter/material.dart';
 import '../widgets/challenge_details.dart';
 
@@ -11,17 +12,9 @@ class ChallengeView extends StatefulWidget {
 }
 
 class _ChallengeState extends State<ChallengeView> {
-  List<Details> sampleChallenges = [
-    Details('Walk 500k steps', 'Daily', false),
-    Details('Walk 50k steps', 'Weekly', true),
-    Details('Walk 6k steps before 6pm', 'Monthly', true),
-    Details('Walk 1k steps before 12pm', 'Weekly', false),
-    Details('Walk 1 mile', 'Daily', true),
-    Details('Walk 50 miles', 'Monthly', true),
-    Details('Walk 5 miles', 'Weekly', false),
-    Details('Walk 20,000k monthly', 'Monthly', true),
-    Details('Walk 2 miles before 8pm', 'Daily', true),
-  ];
+  ChallengeData sample1 = ChallengesDB().getChallenge('challenge-001');
+  ChallengeData sample2 = ChallengesDB().getChallenge('challenge-002');
+  ChallengeData sample3 = ChallengesDB().getChallenge('challenge-003');
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +30,9 @@ class _ChallengeState extends State<ChallengeView> {
                 'Challenges',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
-              for (Details challenge in sampleChallenges)
-                Details(
-                  challenge.challenge,
-                  challenge.frequency,
-                  challenge.complete
-                ),
+              Details(sample1.challenge, sample1.frequency, sample1.complete),
+              Details(sample2.challenge, sample2.frequency, sample2.complete),
+              Details(sample3.challenge, sample3.frequency, sample3.complete),
             ],
           ),
         ),

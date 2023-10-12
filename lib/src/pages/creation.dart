@@ -16,11 +16,31 @@ class _CreationState extends State<CreationView> {
   @override
   Widget build(BuildContext context) {
     int currentImageIndex = 0;
+    int currentPetIndex = 0;
+
     List<String> imagePaths = [
       'assets/images/background.png',
       'assets/images/beach.jpg',
       'assets/images/couch.png'
     ];
+
+    List<String> petPaths = [
+      'assets/images/dog.png',
+      'assets/images/cat.png',
+      'assets/images/bird.png',
+    ];
+
+    void nextPet() {
+      setState(() {
+        currentPetIndex = (currentPetIndex + 1) % petPaths.length;
+      });
+    }
+
+    void previousPet() {
+      setState(() {
+        currentPetIndex = (currentPetIndex - 1 + petPaths.length) % petPaths.length;
+      });
+    }
 
     void nextImage() {
       setState(() {
@@ -47,12 +67,21 @@ class _CreationState extends State<CreationView> {
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 40.0),
-                Image.asset('assets/images/dog.png', width: 100.0),
-                ElevatedButton(
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                  onPressed: () {},
-                  child: const Text('Choose Pet'),
+                Image.asset(petPaths[currentPetIndex], width: 100.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: previousPet,
+                    ),
+                    Text('Choose Pet',style: TextStyle(fontSize: 20.0),),
+                    IconButton(
+                      icon: Icon(Icons.arrow_forward),
+                      onPressed: nextPet,
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 30.0),
                 Row(
@@ -70,6 +99,7 @@ class _CreationState extends State<CreationView> {
                     ),
                   ],
                 ),
+                const SizedBox(height: 30.0),
                 TextField(
                   controller: _usernameController,
                   decoration: const InputDecoration(

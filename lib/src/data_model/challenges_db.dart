@@ -26,7 +26,7 @@ class ChallengesDB {
       id: 'challenge-002',
       frequency: 'Weekly',
       challenge: 'Walk 70k steps',
-      complete: false,
+      complete: true,
     ),
     ChallengeData(
       id: 'challenge-003',
@@ -35,6 +35,9 @@ class ChallengesDB {
       complete: false,
     ),
   ];
+  List<String> getAllChallenges() {
+    return _challenges.map((data) => data.id).toList();
+  }
 
   ChallengeData getChallenge(String challengeID) {
     return _challenges.firstWhere((challengeData) => challengeData.id == challengeID);
