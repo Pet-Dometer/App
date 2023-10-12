@@ -15,6 +15,25 @@ class _CreationState extends State<CreationView> {
 
   @override
   Widget build(BuildContext context) {
+    int currentImageIndex = 0;
+    List<String> imagePaths = [
+      'assets/images/background.png',
+      'assets/images/beach.jpg',
+      'assets/images/couch.png'
+    ];
+
+    void nextImage() {
+      setState(() {
+        currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+      });
+    }
+
+    void previousImage() {
+      setState(() {
+        currentImageIndex = (currentImageIndex - 1 + imagePaths.length) % imagePaths.length;
+      });
+    }
+
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -35,17 +54,19 @@ class _CreationState extends State<CreationView> {
                   onPressed: () {},
                   child: const Text('Choose Pet'),
                 ),
+                const SizedBox(height: 30.0),
                 Row(
                   children: <Widget>[
-                    const SizedBox(height: 200.0),
-                    Image.asset('assets/images/background.png', width: 120),
-                    const Spacer(),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black
-                      ),
-                      onPressed: () {},
-                      child: const Text('Choose Background'),
+                    Image.asset(imagePaths[currentImageIndex], width: 100),
+                    SizedBox(width: 20),
+                    IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: previousImage,
+                    ),
+                    Text('Choose Background'),
+                    IconButton(
+                      icon: Icon(Icons.arrow_forward),
+                      onPressed: nextImage,
                     ),
                   ],
                 ),
