@@ -1,3 +1,4 @@
+import 'package:app/src/data_model/pet_db.dart';
 import 'package:flutter/material.dart';
 import '../widgets/pedometer_circles.dart';
 
@@ -14,15 +15,16 @@ class _PedometerState extends State<PedometerView> {
 
   @override
   Widget build(BuildContext context) {
+    PetData sample1 = PetDB().getPet('pet-001');
     return Scaffold(
       body: SafeArea(
         child: ListView(
           children: <Widget>[
             Container(
               height: 400,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/background.png'),
+                    image: sample1.background,
                     fit: BoxFit.fill),
               ),
               child: Column(
@@ -31,11 +33,11 @@ class _PedometerState extends State<PedometerView> {
                     alignment: Alignment.center,
                     height: 60.0,
                     child: Text(
-                      'Mugi [13]',
+                      sample1.petName,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  Image.asset('assets/images/dog2.png', width: 300),
+                  sample1.type,
                   Image.asset('assets/images/healthbar.png', width: 150),
                 ],
               ),
@@ -46,16 +48,16 @@ class _PedometerState extends State<PedometerView> {
               children: [
                 const SizedBox(height: 20),
                 Image.asset('assets/images/moodbar.png', width: 200),
-                const SizedBox(height: 40),
-                const Row(
+                const SizedBox(height: 20),
+                Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    ProgressCircle('Steps', 0.25, 4000),
+                    ProgressCircle('Steps', 0.25, sample1.steps),
                     SizedBox(width: 30),
-                    ProgressCircle('Calories', .5, 300),
+                    ProgressCircle('Calories', .5, sample1.calories),
                     SizedBox(width: 30),
-                    ProgressCircle('Miles', .8, 7),
+                    ProgressCircle('Miles', .8, sample1.miles),
                     SizedBox(width: 30),
                   ],
                 )

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class PetData {
   PetData({
     required this.id,
+    required this.ownerID,
     required this.petName,
     required this.background,
     required this.type,
@@ -15,14 +16,15 @@ class PetData {
   });
 
   String id;
+  String ownerID;
   String petName;
-  Image background;
+  ImageProvider background;
   Image type;
   int healthBar;
   int moodBar;
   int steps;
-  double calories;
-  double miles;
+  int calories;
+  int miles;
 }
 
 /// Provides access to and operations on all defined users.
@@ -30,47 +32,51 @@ class PetDB {
   final List<PetData> _pets = [
     PetData(
       id: 'pet-001',
-      petName: 'Mugi',
-      background: Image.asset('assets/images/background.png'),
-      type: Image.asset('assets/images/dog2.png'),
+      ownerID: 'user-001',
+      petName: '[Mugi]',
+      background: AssetImage('assets/images/background.png'),
+      type: Image.asset('assets/images/dog2.png', width: 300),
       healthBar: 100,
       moodBar: 34,
       steps: 23132,
-      calories: (23132 * 0.04),
-      miles: (23132 / 2000),
+      calories: 925,
+      miles: 11,
     ),
     PetData(
       id: 'pet-002',
-      petName: 'Toro',
-      background: Image.asset('assets/images/background.png'),
+      ownerID: 'user-002',
+      petName: '[Toro]',
+      background: AssetImage('assets/images/background.png'),
       type: Image.asset('assets/images/dog2.png'),
       healthBar: 80,
       moodBar: 27,
       steps: 35163,
-      calories: (35163 * 0.04),
-      miles: (35163 / 2000),
+      calories: 423,
+      miles: 9,
     ),
     PetData(
       id: 'pet-003',
-      petName: 'Mew',
-      background: Image.asset('assets/images/background.png'),
+      ownerID: 'user-003',
+      petName: '[Mew]',
+      background: AssetImage('assets/images/background.png'),
       type: Image.asset('assets/images/dog2.png'),
       healthBar: 77,
       moodBar: 55,
       steps: 61532,
-      calories: (61532 * 0.04),
-      miles: (61532 / 2000),
+      calories: 1286,
+      miles: 13,
     ),
     PetData(
       id: 'pet-004',
-      petName: 'Kilo',
-      background: Image.asset('assets/images/background.png'),
+      ownerID: 'user-004',
+      petName: '[Kilo]',
+      background: AssetImage('assets/images/background.png'),
       type: Image.asset('assets/images/dog2.png'),
       healthBar: 68,
       moodBar: 99,
       steps: 23461,
-      calories: (23461 * 0.04),
-      miles: (23461 / 2000),
+      calories: 902,
+      miles: 11,
     ),
   ];
 
