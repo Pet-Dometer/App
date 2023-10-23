@@ -45,8 +45,13 @@ class UserDB {
   }
 }
 
+final userDBProvider = Provider<UserDB>((ref) {
+  return UserDB(ref);
+});
+
+final currentUserIDProvider = StateProvider<String>((ref) {
+  return 'user-001';
+});
+
 /// The singleton instance providing access to all user data for clients.
 UserDB userDB = UserDB();
-
-/// The currently logged in user.
-String currentUserID = 'user-001';
