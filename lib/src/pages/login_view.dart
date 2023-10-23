@@ -2,7 +2,6 @@ import 'package:app/src/pages/sign_up.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:app/src/pages/creation.dart';
-import 'package:app/src/pages/sign_up.dart';
 import 'package:app/src/pages/forgot_password.dart';
 
 /// Top-level Layout for all of the "Home" related
@@ -30,22 +29,22 @@ class _LoginViewState extends State<LoginView> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Text(
+            const Text(
               'Welcome to Pet-Ometer!',
               style: TextStyle(
                 fontSize: 35,
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 100),
-            Text(
+            const SizedBox(height: 100),
+            const Text(
               'Please sign in',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.black,
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10),
               child: TextField(
                 decoration: InputDecoration(
@@ -54,7 +53,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10),
               child: TextField(
                 obscureText: true,
@@ -71,7 +70,7 @@ class _LoginViewState extends State<LoginView> {
                 children: <Widget>[
                   RichText(
                     text: TextSpan(children: [
-                      TextSpan(
+                      const TextSpan(
                         text: 'Forgot your password? ',
                         style: TextStyle(
                             color: Colors.black,
@@ -80,7 +79,7 @@ class _LoginViewState extends State<LoginView> {
                       ),
                       TextSpan(
                           text: 'Reset here',
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.blue,
                               fontSize: 15
                           ),
@@ -91,11 +90,11 @@ class _LoginViewState extends State<LoginView> {
                             }),
                     ]),
                   ),
-                  SizedBox(width: 100),
+                  const SizedBox(width: 100),
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Container(
               height: 50,
               width: 250,
@@ -108,15 +107,15 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, CreationView.routeName);                },
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 180,
             ),
             RichText(
               text: TextSpan(children: [
-                TextSpan(
+                const TextSpan(
                   text: 'New user? ',
                   style: TextStyle(
                     color: Colors.black,
@@ -125,13 +124,12 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 TextSpan(
                     text: 'Sign up here',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.blue,
                       fontSize: 15
                     ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        print('sign up here clicked');
                         Navigator.pushNamed(context, SignupView.routeName);
                       }),
               ]),
