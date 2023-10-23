@@ -16,23 +16,23 @@ class UserDB {
   final List<UserData> _users = [
     UserData(
       id: 'user-001',
-      password: 'user1',
-      email: 'jennacorindeane@gmail.com',
+      password: 'foo',
+      email: 'johnfoo@gmail.com',
     ),
     UserData(
       id: 'user-002',
-      password: 'user2',
-      email: 'jessebeck@gmail.com',
+      password: 'foo',
+      email: 'janefoo@gmail.com',
     ),
     UserData(
       id: 'user-003',
-      password: 'user3',
-      email: 'joanne.amberg@gmail.com',
+      password: 'foo',
+      email: 'joefoog@gmail.com',
     ),
     UserData(
       id: 'user-004',
-      password: 'user4',
-      email: 'johnson@hawaii.edu',
+      password: 'foo',
+      email: 'maryfoo@hawaii.edu',
     ),
   ];
 
