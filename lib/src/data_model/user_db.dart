@@ -1,3 +1,5 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 /// The data associated with users.
 class UserData {
   UserData({
@@ -13,6 +15,9 @@ class UserData {
 
 /// Provides access to and operations on all defined users.
 class UserDB {
+  UserDB(this.ref);
+
+  final ProviderRef<UserDB> ref;
   final List<UserData> _users = [
     UserData(
       id: 'user-001',
@@ -52,6 +57,3 @@ final userDBProvider = Provider<UserDB>((ref) {
 final currentUserIDProvider = StateProvider<String>((ref) {
   return 'user-001';
 });
-
-/// The singleton instance providing access to all user data for clients.
-UserDB userDB = UserDB();
