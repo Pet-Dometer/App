@@ -32,7 +32,7 @@ class UserDB {
     UserData(
       id: 'user-003',
       password: 'foo',
-      email: 'joefoog@gmail.com',
+      email: 'joefoo@gmail.com',
     ),
     UserData(
       id: 'user-004',

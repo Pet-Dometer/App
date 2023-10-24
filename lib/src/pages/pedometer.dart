@@ -15,8 +15,10 @@ class PedometerView extends ConsumerWidget {
     final String currentUserID = ref.watch(currentUserIDProvider);
     final String currentUserPetID = petDB.getAssociatedPetID(currentUserID);
 
-    PetData currentPet = petDB.getPet(currentUserPetID);
     print(currentUserPetID);
+    print(currentUserID);
+    print(petDB);
+    PetData currentPet = petDB.getPet(currentUserPetID);
 
     return Scaffold(
       body: SafeArea(
@@ -33,14 +35,13 @@ class PedometerView extends ConsumerWidget {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    height: 60.0,
+                    height: 40.0,
                     child: Text(
                       currentPet.petName,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                   currentPet.type,
-                  Image.asset('assets/images/healthbar.png', width: 150),
                 ],
               ),
             ),
@@ -49,7 +50,7 @@ class PedometerView extends ConsumerWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 20),
-                Image.asset('assets/images/moodbar.png', width: 200),
+                Image.asset('assets/images/healthbar.png', width: 150),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisSize: MainAxisSize.min,

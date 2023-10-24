@@ -124,7 +124,7 @@ class LoginView extends ConsumerWidget {
                       Navigator.pushReplacementNamed(context, '/home');
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                        content: Text("Unknown User"),
+                        content: Text("Incorrect E-mail"),
                         duration: Duration(seconds: 10),
                       ));
                     }
