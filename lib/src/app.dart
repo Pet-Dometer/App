@@ -88,8 +88,6 @@ class MyApp extends StatelessWidget {
                     return HomeView();
                   case LeaderBoardView.routeName:
                     return const LeaderBoardView();
-                  case PedometerView.routeName:
-                    return const PedometerView();
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
                   case SignupView.routeName:
@@ -97,7 +95,7 @@ class MyApp extends StatelessWidget {
                   case ForgotPasswordView.routeName:
                     return const ForgotPasswordView();
                   default:
-                    return const LoginView();
+                    return LoginView();
                 }
               },
             );
