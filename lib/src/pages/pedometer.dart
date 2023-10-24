@@ -14,10 +14,7 @@ class PedometerView extends ConsumerWidget {
     final PetDB petDB = ref.watch(petDBProvider);
     final String currentUserID = ref.watch(currentUserIDProvider);
     final String currentUserPetID = petDB.getAssociatedPetID(currentUserID);
-
-    print(currentUserPetID);
-    print(currentUserID);
-    print(petDB);
+    
     PetData currentPet = petDB.getPet(currentUserPetID);
 
     return Scaffold(
