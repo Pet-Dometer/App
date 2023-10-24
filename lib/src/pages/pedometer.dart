@@ -1,21 +1,21 @@
 import 'package:app/src/data_model/pet_db.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../data_model/user_db.dart';
 import '../widgets/pedometer_circles.dart';
 
-class PedometerView extends StatefulWidget {
+class PedometerView extends ConsumerWidget {
   const PedometerView({Key? key}) : super(key: key);
 
   static const routeName = '/pedometer';
 
   @override
-  _PedometerState createState() => _PedometerState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final PetDB petDB = ref.watch(petDBProvider);
+    final String currentUserID = ref.watch(currentUserIDProvider);
+    final String currentUserPetID = petDB.getAssociatedPetID(currentUserID);
 
-class _PedometerState extends State<PedometerView> {
-
-  @override
-  Widget build(BuildContext context) {
-    PetData sample1 = PetDB().getPet('pet-001');
+    PetData currentPet = petDB.getPet('pet-001');
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -24,7 +24,7 @@ class _PedometerState extends State<PedometerView> {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: sample1.background,
+                    image: currentPet.background,
                     fit: BoxFit.fill),
               ),
               child: Column(
@@ -33,11 +33,11 @@ class _PedometerState extends State<PedometerView> {
                     alignment: Alignment.center,
                     height: 60.0,
                     child: Text(
-                      sample1.petName,
+                      currentPet.petName,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  sample1.type,
+                  currentPet.type,
                   Image.asset('assets/images/healthbar.png', width: 150),
                 ],
               ),
@@ -53,11 +53,11 @@ class _PedometerState extends State<PedometerView> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    ProgressCircle('Steps', 0.25, sample1.steps),
+                    ProgressCircle('Steps', 0.25, currentPet.steps),
                     SizedBox(width: 30),
-                    ProgressCircle('Calories', .5, sample1.calories),
+                    ProgressCircle('Calories', .5, currentPet.calories),
                     SizedBox(width: 30),
-                    ProgressCircle('Miles', .8, sample1.miles),
+                    ProgressCircle('Miles', .8, currentPet.miles),
                     SizedBox(width: 30),
                   ],
                 )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// The data associated with pets.
 class PetData {
@@ -29,6 +30,9 @@ class PetData {
 
 /// Provides access to and operations on all defined users.
 class PetDB {
+  PetDB(this.ref);
+
+  final ProviderRef<PetDB> ref;
   final List<PetData> _pets = [
     PetData(
       id: 'pet-001',
@@ -84,10 +88,22 @@ class PetDB {
     return _pets.firstWhere((petData) => petData.id == petID);
   }
 
-  List<PetData> getPets(List<String> petIDs) {
-    return _pets.where((petData) => petIDs.contains(petData.id)).toList();
+  List<String> getPetIDs() {
+    return _pets.map((data) => data.id).toList();
+  }
+
+  String getAssociatedPetID(String? userID) {
+    return getPetIDs()
+        .where((petID) => _userIsAssociated(petID, userID!))
+        .toString();
+  }
+
+  bool _userIsAssociated(String petID, String userID) {
+    PetData data = getPet(petID);
+    return (data.ownerID == userID);
   }
 }
 
-/// The singleton instance providing access to all user data for clients.
-PetDB petDB = PetDB();
+final petDBProvider = Provider<PetDB>((ref) {
+  return PetDB(ref);
+});
