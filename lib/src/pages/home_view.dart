@@ -40,11 +40,11 @@ class HomeView extends StatefulWidget {
       ),
     },
     3: {
-      'title': const Text('Log Out'),
+      'title': const Text('Settings'),
       'body': const LogOutView(),
       'navItem': const BottomNavigationBarItem(
-        label: 'Log Out',
-        icon: Icon(Icons.logout),
+        label: 'Settings',
+        icon: Icon(Icons.settings),
       ),
     }
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:app/src/pages/login_view.dart';
 
 class LogOutView extends StatefulWidget {
   const LogOutView({Key? key}) : super(key: key);
 
-  static const routeName = '/log_out';
+  static const routeName = '/settings';
 
   @override
   _LogOutState createState() => _LogOutState();
@@ -69,7 +70,8 @@ class _LogOutState extends State<LogOutView> {
                         color: Colors.white, borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.blue)),
                     child: TextButton(
                       onPressed: () {
-                        // Add logic for the first button
+                        Navigator.pushNamed(
+                            context, LoginView.routeName);
                       },
                       style: ButtonStyle(
                         foregroundColor:
