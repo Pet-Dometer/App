@@ -12,6 +12,8 @@ class PetData {
     required this.healthBar,
     required this.moodBar,
     required this.steps,
+    required this.currentSteps,
+    required this.goalSteps,
     required this.calories,
     required this.miles,
   });
@@ -24,6 +26,8 @@ class PetData {
   int healthBar;
   int moodBar;
   int steps;
+  int currentSteps;
+  int goalSteps;
   int calories;
   int miles;
 }
@@ -33,6 +37,14 @@ class PetDB {
   PetDB(this.ref);
 
   final ProviderRef<PetDB> ref;
+  PetData getPet(String petID) {
+    return _pets.firstWhere((petData) => petData.id == petID);
+  }
+
+  List<String> getPetIDs() {
+    return _pets.map((data) => data.id).toList();
+  }
+
   final List<PetData> _pets = [
     PetData(
       id: 'pet-001',
@@ -43,6 +55,8 @@ class PetDB {
       healthBar: 100,
       moodBar: 34,
       steps: 23132,
+      currentSteps: 3868,
+      goalSteps: 7500,
       calories: 925,
       miles: 11,
     ),
@@ -55,6 +69,8 @@ class PetDB {
       healthBar: 80,
       moodBar: 27,
       steps: 35163,
+      currentSteps: 163,
+      goalSteps: 8500,
       calories: 423,
       miles: 9,
     ),
@@ -67,6 +83,8 @@ class PetDB {
       healthBar: 77,
       moodBar: 55,
       steps: 61532,
+      currentSteps: 9032,
+      goalSteps: 9500,
       calories: 1286,
       miles: 13,
     ),
@@ -79,18 +97,12 @@ class PetDB {
       healthBar: 68,
       moodBar: 99,
       steps: 23461,
+      currentSteps: 4061,
+      goalSteps: 7500,
       calories: 902,
       miles: 11,
     ),
   ];
-
-  PetData getPet(String petID) {
-    return _pets.firstWhere((petData) => petData.id == petID);
-  }
-
-  List<String> getPetIDs() {
-    return _pets.map((data) => data.id).toList();
-  }
 
   String getAssociatedPetID(String userID) {
     return getPetIDs()
