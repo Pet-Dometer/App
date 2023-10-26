@@ -24,14 +24,15 @@ class LoginView extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            Image.asset('assets/images/logo.png', width: 125.0),
             const Text(
               'Welcome to Pet-Ometer!',
               style: TextStyle(
-                fontSize: 35,
+                fontSize: 20,
                 color: Colors.black,
               ),
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 70),
             const Text(
               'Please sign in',
               style: TextStyle(
