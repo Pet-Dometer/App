@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 class ProgressCircle extends StatelessWidget {
   final String metric;
-  final double value;
+  double value;
   final int displayText;
+  final int stepGoal;
+  final int currStep;
 
-  const ProgressCircle(this.metric, this.value, this.displayText);
+  ProgressCircle(this.metric, this.value, this.displayText, this.currStep, this.stepGoal, {super.key});
 
   @override
   Widget build(BuildContext context) {
+    value = currStep/stepGoal;
     return Column(
       children: [
         SizedBox(
@@ -23,24 +26,34 @@ class ProgressCircle extends StatelessWidget {
                   child: CircularProgressIndicator(
                     strokeCap: StrokeCap.round,
                     strokeWidth: 10,
-                    value: this.value,
+                    value: value,
                   ),
                 ),
               ),
               Center(
-                child: Text(
-                  this.displayText.toString(),
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 35,),
+                    Text(
+                      currStep.toString()+"/"+stepGoal.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 10,),
+                    Text(
+                      displayText.toString(),
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Center(
           child: Text(
-            this.metric,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            metric,
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
       ],

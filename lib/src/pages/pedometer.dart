@@ -14,9 +14,10 @@ class PedometerView extends ConsumerWidget {
     final PetDB petDB = ref.watch(petDBProvider);
     final String currentUserID = ref.watch(currentUserIDProvider);
     final String currentUserPetID = petDB.getAssociatedPetID(currentUserID);
-    
-    PetData currentPet = petDB.getPet(currentUserPetID);
 
+    PetData currentPet = petDB.getPet(currentUserPetID);
+    int calories = currentPet.calories;
+    int miles = currentPet.miles;
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -25,8 +26,7 @@ class PedometerView extends ConsumerWidget {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: currentPet.background,
-                    fit: BoxFit.fill),
+                    image: currentPet.background, fit: BoxFit.fill),
               ),
               child: Column(
                 children: [
@@ -53,11 +53,53 @@ class PedometerView extends ConsumerWidget {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    ProgressCircle('Steps', 0.25, currentPet.steps),
+                    Column(
+                      children: [
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        Center(
+                          child: Text(
+                            '$calories',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        const Center(
+                          child: Text(
+                            'Calories',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(width: 30),
-                    ProgressCircle('Calories', .5, currentPet.calories),
+                    ProgressCircle('Steps', .5, currentPet.steps, currentPet.currSteps, currentPet.stepGoal),
                     SizedBox(width: 30),
-                    ProgressCircle('Miles', .8, currentPet.miles),
+                    Column(
+                      children: [
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        Center(
+                          child: Text(
+                            '$miles',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        const Center(
+                          child: Text(
+                            'Miles',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
                     SizedBox(width: 30),
                   ],
                 )
