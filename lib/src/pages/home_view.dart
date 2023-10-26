@@ -1,6 +1,6 @@
 import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/history.dart';
-import 'package:app/src/pages/leader_board.dart';
+import 'package:app/src/pages/log_out.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:flutter/material.dart';
 
@@ -32,14 +32,6 @@ class HomeView extends StatefulWidget {
       ),
     },
     2: {
-      'title': const Text('Leaderboard'),
-      'body': const LeaderBoardView(),
-      'navItem': const BottomNavigationBarItem(
-        label: 'Leaderboard',
-        icon: Icon(Icons.star_border_outlined),
-      ),
-    },
-    3: {
       'title': const Text('Challenges'),
       'body': const ChallengeView(),
       'navItem': const BottomNavigationBarItem(
@@ -47,6 +39,14 @@ class HomeView extends StatefulWidget {
         icon: Icon(Icons.done),
       ),
     },
+    3: {
+      'title': const Text('Log Out'),
+      'body': const LogOutView(),
+      'navItem': const BottomNavigationBarItem(
+        label: 'Log Out',
+        icon: Icon(Icons.logout),
+      ),
+    }
 
   };
 

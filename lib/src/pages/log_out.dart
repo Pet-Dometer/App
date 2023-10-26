@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LeaderBoardView extends StatefulWidget {
-  const LeaderBoardView({Key? key}) : super(key: key);
+class LogOutView extends StatefulWidget {
+  const LogOutView({Key? key}) : super(key: key);
 
-  static const routeName = '/leaderboard';
+  static const routeName = '/log_out';
 
   @override
-  _LeaderBoardState createState() => _LeaderBoardState();
+  _LogOutState createState() => _LogOutState();
 }
 
-class _LeaderBoardState extends State<LeaderBoardView> {
+class _LogOutState extends State<LogOutView> {
 
   @override
   Widget build(BuildContext context) {
