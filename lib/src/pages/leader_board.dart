@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../widgets/user.dart';
 
 class LeaderBoardView extends StatefulWidget {
   const LeaderBoardView({Key? key}) : super(key: key);
 
-  static const routeName = '/pedometer';
+  static const routeName = '/leaderboard';
 
   @override
   _LeaderBoardState createState() => _LeaderBoardState();
@@ -12,61 +11,81 @@ class LeaderBoardView extends StatefulWidget {
 
 class _LeaderBoardState extends State<LeaderBoardView> {
 
-  List<User> myUsers = [
-    User(
-      image: 'assets/images/dog2.png',
-      name: 'User 2',
-      level: 11,
-      steps: 66221,
-    ),
-    User(
-      image: 'assets/images/dog2.png',
-      name: 'User 3',
-      level: 9,
-      steps: 52233,
-    ),
-    User(
-      image: 'assets/images/dog2.png',
-      name: 'User 4',
-      level: 7,
-      steps: 42134,
-    ),
-    User(
-      image: 'assets/images/dog2.png',
-      name: 'User 5',
-      level: 6,
-      steps: 31513,
-    ),
-    User(
-      image: 'assets/images/dog2.png',
-      name: 'User 6',
-      level: 4,
-      steps: 22131,
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(top: 10.0),
         child: SafeArea(
-          child: ListView(
+          child: Column(
             children: <Widget>[
-              const SizedBox(height: 10),
+              const SizedBox(height: 50),
+              Image.asset('assets/images/logo.png', height: 200),
               const Center(
-                child: Text(
-                  'Leaderboard',
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    const SizedBox(height: 70),
+                    Text(
+                      'Oh no! You\'re leaving .... \nAre you sure you want to log out?',
+                      style: TextStyle(fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
               ),
-              for (User user in myUsers)
-                User(
-                  image: user.image,
-                  name: user.name,
-                  level: user.level,
-                  steps: user.steps
-                ),
+              const SizedBox(height: 70),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 50,
+                    width: 275,
+                    decoration: BoxDecoration(
+                        color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+                    child: TextButton(
+                      onPressed: () {
+                        // Add logic for the first button
+                      },
+                      style: ButtonStyle(
+                        foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                      ),
+                      child: Text(
+                        'Nahhh, just kidding',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                      )),
+                    ),
+                  ),
+                  SizedBox(height: 20), // Space between the buttons
+                  Container(
+                    height: 50,
+                    width: 275,
+                    decoration: BoxDecoration(
+                        color: Colors.white, borderRadius: BorderRadius.circular(20), border: Border.all(color: Colors.blue)),
+                    child: TextButton(
+                      onPressed: () {
+                        // Add logic for the first button
+                      },
+                      style: ButtonStyle(
+                        foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.blue),
+                      ),
+                      child: Text(
+                        'Yes, log me out',
+                        style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.blue,
+                      )
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -74,4 +93,3 @@ class _LeaderBoardState extends State<LeaderBoardView> {
     );
   }
 }
-
