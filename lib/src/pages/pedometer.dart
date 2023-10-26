@@ -75,9 +75,9 @@ class PedometerView extends ConsumerWidget {
                         )
                       ],
                     ),
-                    SizedBox(width: 30),
+                    const SizedBox(width: 30),
                     ProgressCircle('Steps', .5, currentPet.steps, currentPet.currSteps, currentPet.stepGoal),
-                    SizedBox(width: 30),
+                    const SizedBox(width: 30),
                     Column(
                       children: [
                         const SizedBox(
@@ -100,7 +100,7 @@ class PedometerView extends ConsumerWidget {
                         )
                       ],
                     ),
-                    SizedBox(width: 30),
+                    const SizedBox(width: 30),
                   ],
                 )
               ],
