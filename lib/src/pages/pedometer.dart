@@ -1,7 +1,7 @@
-import 'package:app/src/data_model/pet_db.dart';
+import 'package:app/features/pet/domain/pet_db.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../data_model/user_db.dart';
+import '../../features/user/data/user_providers.dart';
 import '../widgets/pedometer_circles.dart';
 
 class PedometerView extends ConsumerWidget {

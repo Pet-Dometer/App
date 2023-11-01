@@ -6,7 +6,8 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
-import '../data_model/user_db.dart';
+import '../../features/user/data/user_providers.dart';
+import '../../features/user/domain/user_db.dart';
 
 /// Top-level Layout for all of the "Home" related
 class LoginView extends ConsumerWidget {
