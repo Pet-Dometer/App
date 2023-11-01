@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/// The data associated with pets.
 class PetData {
   PetData({
     required this.id,
@@ -21,7 +20,7 @@ class PetData {
   String id;
   String ownerID;
   String petName;
-  ImageProvider background;
+  ImageProvider<Object> background;
   Image type;
   int healthBar;
   int moodBar;
@@ -30,9 +29,16 @@ class PetData {
   int stepGoal;
   int calories;
   int miles;
+
+  int getCalories() {
+    return (steps * 0.04).round();
+  }
+
+  int getMiles() {
+    return (steps / 2000).round();
+  }
 }
 
-/// Provides access to and operations on all defined users.
 class PetDB {
   PetDB(this.ref);
 
@@ -57,8 +63,8 @@ class PetDB {
       steps: 23132,
       currSteps: 3868,
       stepGoal: 7500,
-      calories: 925,
-      miles: 11,
+      calories: 0,
+      miles: 0,
     ),
     PetData(
       id: 'pet-002',
@@ -71,8 +77,8 @@ class PetDB {
       steps: 35163,
       currSteps: 163,
       stepGoal: 8500,
-      calories: 423,
-      miles: 9,
+      calories: 0,
+      miles: 0,
     ),
     PetData(
       id: 'pet-003',
@@ -85,8 +91,8 @@ class PetDB {
       steps: 61532,
       currSteps: 9032,
       stepGoal: 9500,
-      calories: 1286,
-      miles: 13,
+      calories: 0,
+      miles: 0,
     ),
     PetData(
       id: 'pet-004',
@@ -99,23 +105,35 @@ class PetDB {
       steps: 23461,
       currSteps: 4061,
       stepGoal: 7500,
-      calories: 902,
-      miles: 11,
+      calories: 0,
+      miles: 0,
     ),
   ];
 
   String getAssociatedPetID(String userID) {
     return getPetIDs()
         .where((petID) => _userIsAssociated(petID, userID))
-        .toString().replaceAll("(", "").replaceAll(")", "");
+        .toString()
+        .replaceAll("(", "")
+        .replaceAll(")", "");
   }
 
   bool _userIsAssociated(String petID, String userID) {
     PetData data = getPet(petID);
-    return (data.ownerID == userID);
+    return data.ownerID == userID;
+  }
+
+  // Calculate calories and miles for each pet in the _pets list
+  void calculateCaloriesAndMiles() {
+    for (var pet in _pets) {
+      pet.calories = pet.getCalories();
+      pet.miles = pet.getMiles();
+    }
   }
 }
 
 final petDBProvider = Provider<PetDB>((ref) {
-  return PetDB(ref);
+  final petDB = PetDB(ref);
+  petDB.calculateCaloriesAndMiles(); // Calculate calories and miles during initialization
+  return petDB;
 });
