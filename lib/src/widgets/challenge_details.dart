@@ -1,4 +1,4 @@
-import 'package:app/src/data_model/challenges_db.dart';
+import 'package:app/features/challenges/domain/challenges_db.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {

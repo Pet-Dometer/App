@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/stats.dart';
-import '../widgets/days.dart';
+import '../../../src/widgets/stats.dart';
+import '../../../src/widgets/days.dart';
 
 class HistoryView extends StatefulWidget {
   const HistoryView({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:app/features/pet/domain/pet_db.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../features/user/data/user_providers.dart';
-import '../widgets/pedometer_circles.dart';
+import '../../user/data/user_providers.dart';
+import '../../../src/widgets/pedometer_circles.dart';
 
 class PedometerView extends ConsumerWidget {
   const PedometerView({Key? key}) : super(key: key);

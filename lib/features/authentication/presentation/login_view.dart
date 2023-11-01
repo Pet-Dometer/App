@@ -1,7 +1,7 @@
 import 'package:app/features/authentication/presentation/sign_up.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:app/src/pages/forgot_password.dart';
+import 'package:app/features/authentication/presentation/forgot_password.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
