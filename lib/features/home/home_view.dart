@@ -3,7 +3,7 @@ import 'package:app/features/home/presentation/history.dart';
 import 'package:app/features/home/presentation/pedometer.dart';
 import 'package:flutter/material.dart';
 
-import '../../src/pages/settings.dart';
+import '../settings/presentation/settings.dart';
 
 /// Top-level Layout for all of the "Home" related
 class HomeView extends StatefulWidget {

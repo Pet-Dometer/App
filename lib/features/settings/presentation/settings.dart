@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:app/src/pages/login_view.dart';
 
-import '../../features/authentication/presentation/login_view.dart';
+import '../../authentication/presentation/login_view.dart';
 
 class SettingsPageView extends StatefulWidget {
   const SettingsPageView({Key? key}) : super(key: key);
