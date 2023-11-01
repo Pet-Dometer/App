@@ -1,20 +1,15 @@
+import 'package:app/src/pages/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:app/src/pages/creation.dart';
-import 'package:app/src/pages/home_view.dart';
-import 'package:app/src/pages/settings.dart';
-import 'package:app/src/pages/login_view.dart';
-import 'package:app/src/pages/history.dart';
-import 'package:app/src/pages/pedometer.dart';
-import 'package:app/src/pages/challenges.dart';
-import 'package:app/src/pages/sign_up.dart';
-import 'package:app/src/pages/forgot_password.dart';
-
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
+import 'package:app/features/home/presentation/challenges.dart';
+import 'package:app/features/home/home_view.dart';
+import 'package:app/features/authentication/presentation/login_view.dart';
+import 'package:app/features/home/presentation/history.dart';
+import 'package:app/features/authentication/presentation/sign_up.dart';
+import 'package:app/features/authentication/presentation/forgot_password.dart';
 import 'settings/settings_controller.dart';
-import 'settings/settings_view.dart';
 
 import 'dart:async';
 
@@ -44,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       darkTheme: ThemeData.dark(),
       themeMode: settingsController.themeMode,
-      home: SplashScreen(),
+      home: const SplashScreen(),
       onGenerateRoute: (RouteSettings routeSettings) {
         return MaterialPageRoute<void>(
           settings: routeSettings,
@@ -60,8 +55,6 @@ class MyApp extends StatelessWidget {
                 return HomeView();
               case SettingsPageView.routeName:
                 return const SettingsPageView();
-              case SettingsView.routeName:
-                return SettingsView(controller: settingsController);
               case SignupView.routeName:
                 return const SignupView();
               case ForgotPasswordView.routeName:
@@ -77,6 +70,8 @@ class MyApp extends StatelessWidget {
 }
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -85,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3),
+    Timer(const Duration(seconds: 3),
             ()=>Navigator.pushReplacement(context,
             MaterialPageRoute(builder:
                 (context) =>

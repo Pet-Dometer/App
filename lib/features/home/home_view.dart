@@ -1,10 +1,9 @@
-import 'package:app/src/pages/challenges.dart';
-import 'package:app/src/pages/history.dart';
-import 'package:app/src/pages/settings.dart';
-import 'package:app/src/pages/pedometer.dart';
+import 'package:app/features/home/presentation/challenges.dart';
+import 'package:app/features/home/presentation/history.dart';
+import 'package:app/features/home/presentation/pedometer.dart';
 import 'package:flutter/material.dart';
 
-import '../settings/settings_view.dart';
+import '../../src/pages/settings.dart';
 
 /// Top-level Layout for all of the "Home" related
 class HomeView extends StatefulWidget {

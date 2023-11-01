@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'creation.dart';
+import '../../../src/pages/creation.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
