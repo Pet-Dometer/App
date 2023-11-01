@@ -1,6 +1,6 @@
 import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/history.dart';
-import 'package:app/src/pages/log_out.dart';
+import 'package:app/src/pages/settings.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +41,7 @@ class HomeView extends StatefulWidget {
     },
     3: {
       'title': const Text('Settings'),
-      'body': const LogOutView(),
+      'body': const SettingsPageView(),
       'navItem': const BottomNavigationBarItem(
         label: 'Settings',
         icon: Icon(Icons.settings),

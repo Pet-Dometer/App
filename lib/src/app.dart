@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:app/src/pages/creation.dart';
-import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/home_view.dart';
-import 'package:app/src/pages/log_out.dart';
+import 'package:app/src/pages/settings.dart';
 import 'package:app/src/pages/login_view.dart';
 import 'package:app/src/pages/history.dart';
 import 'package:app/src/pages/pedometer.dart';
@@ -59,8 +58,8 @@ class MyApp extends StatelessWidget {
                 return const HistoryView();
               case HomeView.routeName:
                 return HomeView();
-              case LogOutView.routeName:
-                return const LogOutView();
+              case SettingsPageView.routeName:
+                return const SettingsPageView();
               case SettingsView.routeName:
                 return SettingsView(controller: settingsController);
               case SignupView.routeName:
