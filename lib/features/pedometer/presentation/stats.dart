@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Stats {
   String _title = '';
   double _value = 0.0;

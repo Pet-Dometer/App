@@ -1,10 +1,8 @@
-import 'package:app/features/challenges/domain/challenges_db.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {
   String challenge;
   String frequency;
-  Color _color = Colors.lightBlue;
   bool complete;
 
   Details(String this.challenge, String this.frequency, bool this.complete);

@@ -1,5 +1,5 @@
+import 'package:app/features/home/home_view.dart';
 import 'package:flutter/material.dart';
-import '../../../src/pages/creation.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -58,7 +58,7 @@ class SignupViewState extends State<SignupView> {
         ElevatedButton(
             onPressed: () {
               // Eventually: pushReplacementNamed
-              Navigator.pushNamed(context, CreationView.routeName);
+              Navigator.pushNamed(context, HomeView.routeName);
             },
             child: const Text('Sign up')),
       ],

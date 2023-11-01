@@ -2,7 +2,6 @@ import 'package:app/features/settings/presentation/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:app/src/pages/creation.dart';
 import 'package:app/features/home/presentation/challenges.dart';
 import 'package:app/features/home/home_view.dart';
 import 'package:app/features/authentication/presentation/login_view.dart';
@@ -47,8 +46,6 @@ class MyApp extends StatelessWidget {
             switch (routeSettings.name) {
               case ChallengeView.routeName:
                 return const ChallengeView();
-              case CreationView.routeName:
-                return const CreationView();
               case HistoryView.routeName:
                 return const HistoryView();
               case HomeView.routeName:
