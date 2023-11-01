@@ -60,11 +60,3 @@ class UserDB {
     return emails.contains(email);
   }
 }
-
-final userDBProvider = Provider<UserDB>((ref) {
-  return UserDB(ref);
-});
-
-final currentUserIDProvider = StateProvider<String>((ref) {
-  return 'user-001';
-});
