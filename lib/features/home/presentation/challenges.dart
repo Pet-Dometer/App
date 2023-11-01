@@ -1,6 +1,6 @@
 import 'package:app/features/challenges/domain/challenges_db.dart';
 import 'package:flutter/material.dart';
-import '../../../src/widgets/challenge_details.dart';
+import '../../challenges/presentation/challenge_details.dart';
 
 class ChallengeView extends StatefulWidget {
   const ChallengeView({Key? key}) : super(key: key);

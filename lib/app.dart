@@ -9,7 +9,7 @@ import 'package:app/features/authentication/presentation/login_view.dart';
 import 'package:app/features/home/presentation/history.dart';
 import 'package:app/features/authentication/presentation/sign_up.dart';
 import 'package:app/features/authentication/presentation/forgot_password.dart';
-import '../features/settings/settings_controller.dart';
+import 'features/settings/settings_controller.dart';
 
 import 'dart:async';
 
