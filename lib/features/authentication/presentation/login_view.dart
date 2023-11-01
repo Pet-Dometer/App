@@ -1,4 +1,4 @@
-import 'package:app/src/pages/sign_up.dart';
+import 'package:app/features/authentication/presentation/sign_up.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:app/src/pages/forgot_password.dart';
@@ -6,8 +6,8 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
-import '../../features/user/data/user_providers.dart';
-import '../../features/user/domain/user_db.dart';
+import '../../user/data/user_providers.dart';
+import '../../user/domain/user_db.dart';
 
 /// Top-level Layout for all of the "Home" related
 class LoginView extends ConsumerWidget {

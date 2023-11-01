@@ -5,11 +5,11 @@ import 'package:app/src/pages/creation.dart';
 import 'package:app/src/pages/challenges.dart';
 import 'package:app/src/pages/home_view.dart';
 import 'package:app/src/pages/log_out.dart';
-import 'package:app/src/pages/login_view.dart';
+import 'package:app/features/authentication/presentation/login_view.dart';
 import 'package:app/src/pages/history.dart';
 import 'package:app/src/pages/pedometer.dart';
 import 'package:app/src/pages/challenges.dart';
-import 'package:app/src/pages/sign_up.dart';
+import 'package:app/features/authentication/presentation/sign_up.dart';
 import 'package:app/src/pages/forgot_password.dart';
 
 import 'sample_feature/sample_item_details_view.dart';

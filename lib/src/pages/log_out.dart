@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app/src/pages/login_view.dart';
+import 'package:app/features/authentication/presentation/login_view.dart';
 
 class LogOutView extends StatefulWidget {
   const LogOutView({Key? key}) : super(key: key);
