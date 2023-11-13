@@ -1,4 +1,31 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'user.freezed.dart';
+part 'user.g.dart';
+
+@Freezed()
+class User with _$User {
+  const factory User({
+    required String id,
+    required String email,
+    required String password,
+}) = _User;
+
+  const User._();
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  static Future<List<User>> checkInitialData() async {
+    String content =
+    await rootBundle.loadString("assets/initialData/users.json");
+    List<dynamic> initialData = json.decode(content);
+    return initialData.map((jsonData) => User.fromJson(jsonData)).toList();
+  }
+}
 
 /// The data associated with users.
 class UserData {
@@ -40,23 +67,4 @@ class UserDB {
       email: 'maryfoo@hawaii.edu',
     ),
   ];
-
-  UserData getUser(String userID) {
-    return _users.firstWhere((userData) => userData.id == userID);
-  }
-
-  List<UserData> getUsers(List<String> userIDs) {
-    return _users.where((userData) => userIDs.contains(userData.id)).toList();
-  }
-
-  String getUserID(String emailOrUsername) {
-    return _users
-        .firstWhere((userData) => userData.email == emailOrUsername)
-        .id;
-  }
-
-  bool isUserEmail(String email) {
-    List<String> emails = _users.map((userData) => userData.email).toList();
-    return emails.contains(email);
-  }
 }
