@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454290264097",
+    "project_id": "pet-ometer",
+    "storage_bucket": "pet-ometer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454290264097:android:4aa90e10c69fe15b225360",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnVaZ-YqZMbCXkUWk2iaWeP0TWe3onyZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
