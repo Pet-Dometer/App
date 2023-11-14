@@ -21,7 +21,10 @@ dependencies:
   intl: ">=0.17.0"
   flutter_riverpod: ">=2.0.2"
   flex_color_scheme: ">=6.1.1"
-
+  # or flutter_riverpod/hooks_riverpod as per https://riverpod.dev/docs/getting_started
+  riverpod:
+  # the annotation package containing @riverpod
+  riverpod_annotation:
   flutter_lints: ^2.0.0
   firebase_core: ^2.22.0
   firebase_auth: ^4.13.0
@@ -48,6 +51,12 @@ flutter:
     - assets/images/splash.png
     - assets/images/logo.png
 dev_dependencies:
+  # the code generator
+  riverpod_generator:
+  # riverpod_lint makes it easier to work with Riverpod
+  riverpod_lint:
+  # import custom_lint too as riverpod_lint depends on it
+  custom_lint:
   build_runner: ^2.4.6
   freezed: ^2.4.5
   json_serializable: ^6.7.1
