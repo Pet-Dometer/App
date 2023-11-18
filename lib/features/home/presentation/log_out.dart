@@ -71,7 +71,7 @@ class _LogOutState extends State<LogOutView> {
                     child: TextButton(
                       onPressed: () {
                         Navigator.pushNamed(
-                            context, LoginView.routeName);
+                            context, SignInView.routeName);
                       },
                       style: ButtonStyle(
                         foregroundColor:

@@ -108,7 +108,7 @@ class _SettingsState extends State<SettingsPageView> {
                     child: TextButton(
                       onPressed: () {
                         Navigator.pushNamed(
-                            context, LoginView.routeName);
+                            context, SignInView.routeName);
                       },
                       style: ButtonStyle(
                         foregroundColor:

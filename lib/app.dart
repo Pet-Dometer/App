@@ -4,9 +4,10 @@ import 'package:app/features/home/presentation/challenges.dart';
 import 'package:app/features/home/home_view.dart';
 import 'package:app/features/authentication/presentation/login_view.dart';
 import 'package:app/features/home/presentation/history.dart';
-import 'package:app/features/authentication/presentation/sign_up.dart';
 
 import 'dart:async';
+
+import 'features/authentication/presentation/forgot_password.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -29,10 +30,8 @@ class MyApp extends StatelessWidget {
                 return HomeView();
               case SettingsPageView.routeName:
                 return const SettingsPageView();
-              case SignupView.routeName:
-                return const SignupView();
-/*              case ForgotPasswordView.routeName:
-                return const ForgotPasswordView();*/
+              case ForgotPasswordView.routeName:
+                return const ForgotPasswordView();
               default:
                 return const SignInView();
             }
