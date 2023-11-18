@@ -1,11 +1,7 @@
 import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 part 'pet_db.freezed.dart';
-
 part 'pet_db.g.dart';
 
 @Freezed()
@@ -27,6 +23,14 @@ class Pet with _$Pet {
 
   const Pet._();
 
+  int getCalories() {
+    return (steps * 0.04).round();
+  }
+
+  int getMiles() {
+    return (steps / 2000).round();
+  }
+
   factory Pet.fromJson(Map<String, dynamic> json) => _$PetFromJson(json);
 
   static Future<List<Pet>> checkInitialData() async {
@@ -37,6 +41,7 @@ class Pet with _$Pet {
   }
 }
 
+/*
 /// The data associated with users.
 class PetData {
   PetData({
@@ -75,6 +80,7 @@ class PetData {
     return (steps / 2000).round();
   }
 }
+*/
 
 /*import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

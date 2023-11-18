@@ -1,5 +1,3 @@
-
-
 import 'package:app/features/pet/domain/pet_db.dart';
 
 class PetCollection {
@@ -24,7 +22,7 @@ class PetCollection {
   }
 
   bool _userIsAssociated(String petID, String userID) {
-    PetData data = getPet(petID) as PetData;
+    Pet data = getPet(petID);
     return data.ownerID == userID;
   }
 }
