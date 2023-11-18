@@ -1,13 +1,12 @@
 import 'package:app/features/settings/presentation/settings.dart';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:app/features/home/presentation/challenges.dart';
 import 'package:app/features/home/home_view.dart';
-import 'package:app/features/authentication/presentation/login_view.dart';
 import 'package:app/features/home/presentation/history.dart';
-import 'package:app/features/authentication/presentation/sign_up.dart';
-import 'package:app/features/authentication/presentation/forgot_password.dart';
+import 'features/authentication/presentation/sign_in_view.dart';
 import 'features/settings/settings_controller.dart';
 
 import 'dart:async';
@@ -52,12 +51,12 @@ class MyApp extends StatelessWidget {
                 return HomeView();
               case SettingsPageView.routeName:
                 return const SettingsPageView();
-              case SignupView.routeName:
-                return const SignupView();
+              case SignInView.routeName:
+                return const SignInView();
               case ForgotPasswordView.routeName:
                 return const ForgotPasswordView();
               default:
-                return LoginView();
+                return const SignInView();
             }
           },
         );
