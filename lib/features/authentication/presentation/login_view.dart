@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class SignInView extends StatelessWidget {
   const SignInView({Key? key}) : super(key: key);
 
-  static const routeName = '/';
+  static const routeName = '/SignInView';
 
   @override
   Widget build(BuildContext context) {
     return SignInScreen(
-      providers: [EmailAuthProvider()],
+      
     );
   }
 }
