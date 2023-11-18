@@ -15,6 +15,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SignInScreen(
+      providers: [EmailAuthProvider()],
       actions: [
         ForgotPasswordAction((context, email) {
           Navigator.pushNamed(
