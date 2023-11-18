@@ -10,20 +10,13 @@ import 'verify_email_view.dart';
 class SignInView extends StatelessWidget {
   const SignInView({Key? key}) : super(key: key);
 
-  static const routeName = '/';
+  static const routeName = '/SignInView';
 
   @override
   Widget build(BuildContext context) {
     return SignInScreen(
       providers: [EmailAuthProvider()],
       actions: [
-        ForgotPasswordAction((context, email) {
-          Navigator.pushNamed(
-            context,
-            ForgotPasswordView.routeName,
-            arguments: {'email': email},
-          );
-        }),
         AuthStateChangeAction<SignedIn>((context, state) {
           if (!state.user!.emailVerified) {
             Navigator.pushNamed(context, VerifyEmailView.routeName);
@@ -50,14 +43,13 @@ class SignInView extends StatelessWidget {
         EmailFormStyle(signInButtonVariant: ButtonVariant.filled),
       },
       headerBuilder: headerImage('assets/images/logo.png'),
-      sideBuilder: sideImage('assets/images/logo.png'),
       subtitleBuilder: (context, action) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 8),
           child: Text(
             action == AuthAction.signIn
-                ? 'Welcome to Agile Garden Club! Please sign in.'
-                : 'Welcome to Agile Garden Club! Please create an account.',
+                ? 'Welcome to Pet-Ometer! Please sign in.'
+                : 'Welcome to Pet-Ometer! Please create an account.',
           ),
         );
       },

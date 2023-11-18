@@ -1,23 +1,36 @@
+import 'package:app/features/error.dart';
+import 'package:app/features/loading.dart';
+import 'package:app/features/pet/domain/pet_collection.dart';
 import 'package:app/features/pet/domain/pet_db.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../user/data/user_providers.dart';
+import '../../all_data_provider.dart';
 import '../../pedometer/presentation/pedometer_circles.dart';
 
 class PedometerView extends ConsumerWidget {
-  const PedometerView({Key? key}) : super(key: key);
+  const PedometerView({Key? key, required this.petID}) : super(key: key);
+
+  final String petID;
 
   static const routeName = '/pedometer';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final PetDB petDB = ref.watch(petDBProvider);
-    final String currentUserID = ref.watch(currentUserIDProvider);
-    final String currentUserPetID = petDB.getAssociatedPetID(currentUserID);
+    final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
+    return asyncAllData.when(
+        data: (allData) => _build(
+            context: context,
+            currentUserID: allData.currentUserID,
+            pets: allData.pets),
+        loading: () => const PedLoading(),
+        error: (error, st) => PedError(error.toString(), st.toString()));
+  }
 
-    PetData currentPet = petDB.getPet(currentUserPetID);
-    int calories = currentPet.calories;
-    int miles = currentPet.miles;
+  @override
+  Widget _build({required BuildContext context,
+  required String currentUserID,
+  required List<Pet> pets}) {
+    Pet currentPet = PetCollection(pets).getPet(currentUserID);
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -26,7 +39,7 @@ class PedometerView extends ConsumerWidget {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: currentPet.background, fit: BoxFit.fill),
+                    image: AssetImage('assets/images/background.png'), fit: BoxFit.fill),
               ),
               child: Column(
                 children: [
@@ -38,7 +51,7 @@ class PedometerView extends ConsumerWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  currentPet.type,
+                  Image.asset('assets/images/dog2.png', width: 300),
                 ],
               ),
             ),

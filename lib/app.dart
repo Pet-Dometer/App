@@ -4,9 +4,7 @@ import 'package:app/features/home/presentation/challenges.dart';
 import 'package:app/features/home/home_view.dart';
 import 'package:app/features/authentication/presentation/login_view.dart';
 import 'package:app/features/home/presentation/history.dart';
-
 import 'dart:async';
-
 import 'features/authentication/presentation/forgot_password.dart';
 
 class MyApp extends StatelessWidget {

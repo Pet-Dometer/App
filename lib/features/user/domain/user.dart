@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';
@@ -38,33 +37,4 @@ class UserData {
   String id;
   String email;
   String password;
-}
-
-/// Provides access to and operations on all defined users.
-class UserDB {
-  UserDB(this.ref);
-
-  final ProviderRef<UserDB> ref;
-  final List<UserData> _users = [
-    UserData(
-      id: 'user-001',
-      password: 'foo',
-      email: 'johnfoo@gmail.com',
-    ),
-    UserData(
-      id: 'user-002',
-      password: 'foo',
-      email: 'janefoo@gmail.com',
-    ),
-    UserData(
-      id: 'user-003',
-      password: 'foo',
-      email: 'joefoo@gmail.com',
-    ),
-    UserData(
-      id: 'user-004',
-      password: 'foo',
-      email: 'maryfoo@hawaii.edu',
-    ),
-  ];
 }

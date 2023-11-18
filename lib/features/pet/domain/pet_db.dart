@@ -1,4 +1,82 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'pet_db.freezed.dart';
+
+part 'pet_db.g.dart';
+
+@Freezed()
+class Pet with _$Pet {
+  const factory Pet({
+    required String id,
+    required String ownerID,
+    required String petName,
+    required String background,
+    required String type,
+    required int healthBar,
+    required int moodBar,
+    required int steps,
+    required int currSteps,
+    required int stepGoal,
+    required int calories,
+    required int miles,
+  }) = _Pet;
+
+  const Pet._();
+
+  factory Pet.fromJson(Map<String, dynamic> json) => _$PetFromJson(json);
+
+  static Future<List<Pet>> checkInitialData() async {
+    String content =
+    await rootBundle.loadString("assets/initialData/users.json");
+    List<dynamic> initialData = json.decode(content);
+    return initialData.map((jsonData) => Pet.fromJson(jsonData)).toList();
+  }
+}
+
+/// The data associated with users.
+class PetData {
+  PetData({
+    required this.id,
+    required this.ownerID,
+    required this.petName,
+    required this.background,
+    required this.type,
+    required this.healthBar,
+    required this.moodBar,
+    required this.steps,
+    required this.currSteps,
+    required this.stepGoal,
+    required this.calories,
+    required this.miles,
+  });
+
+  String id;
+  String ownerID;
+  String petName;
+  ImageProvider<Object> background;
+  Image type;
+  int healthBar;
+  int moodBar;
+  int steps;
+  int currSteps;
+  int stepGoal;
+  int calories;
+  int miles;
+
+  int getCalories() {
+    return (steps * 0.04).round();
+  }
+
+  int getMiles() {
+    return (steps / 2000).round();
+  }
+}
+
+/*import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PetData {
@@ -136,4 +214,4 @@ final petDBProvider = Provider<PetDB>((ref) {
   final petDB = PetDB(ref);
   petDB.calculateCaloriesAndMiles(); // Calculate calories and miles during initialization
   return petDB;
-});
+});*/
