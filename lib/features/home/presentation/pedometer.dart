@@ -37,7 +37,7 @@ class PedometerView extends ConsumerWidget {
           children: <Widget>[
             Container(
               height: 400,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/background.png'), fit: BoxFit.fill),
               ),
