@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'decorations.dart';
 import '../../home/home_view.dart';
-import 'forgot_password.dart';
-import 'verify_email_view.dart';
 
 /// Builds the page containing fields to enter a username and password, plus buttons.
 class SignInView extends StatelessWidget {
@@ -18,25 +16,10 @@ class SignInView extends StatelessWidget {
       providers: [EmailAuthProvider()],
       actions: [
         AuthStateChangeAction<SignedIn>((context, state) {
-          if (!state.user!.emailVerified) {
-            Navigator.pushNamed(context, VerifyEmailView.routeName);
-          } else {
-            Navigator.pushReplacementNamed(context, HomeView.routeName);
-          }
+          Navigator.pushReplacementNamed(context, HomeView.routeName);
         }),
         AuthStateChangeAction<UserCreated>((context, state) {
-          if (!state.credential.user!.emailVerified) {
-            Navigator.pushNamed(context, VerifyEmailView.routeName);
-          } else {
-            Navigator.pushReplacementNamed(context, HomeView.routeName);
-          }
-        }),
-        AuthStateChangeAction<CredentialLinked>((context, state) {
-          if (!state.user.emailVerified) {
-            Navigator.pushNamed(context, VerifyEmailView.routeName);
-          } else {
-            Navigator.pushReplacementNamed(context, HomeView.routeName);
-          }
+          Navigator.pushReplacementNamed(context, HomeView.routeName);
         }),
       ],
       styles: const {
