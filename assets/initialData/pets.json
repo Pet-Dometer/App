@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pet-001",
+    "ownerID": "foo@gmail.com",
+    "petName": "Mugi",
+    "background": "",
+    "type": "",
+    "steps": "10000",
+    "currSteps": "6000",
+    "stepGoal": "6500"
+  },
+  {
+    "id": "pet-002",
+    "ownerID": "foo1@gmail.com",
+    "petName": "Toro",
+    "background": "",
+    "type": "",
+    "steps": "15000",
+    "currSteps": "8000",
+    "stepGoal": "9500"
+  },
+  {
+    "id": "pet-003",
+    "ownerID": "foo2@gmail.com",
+    "petName": "Kilo",
+    "background": "",
+    "type": "",
+    "steps": "10000",
+    "currSteps": "5500",
+    "stepGoal": "6500"
+  }
+]
