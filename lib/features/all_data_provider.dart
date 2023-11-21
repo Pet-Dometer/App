@@ -4,6 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'pet/data/pet_provider.dart';
 import 'user/data/user_providers.dart';
 import 'challenges/data/challenges_provider.dart';
+import 'package:app/features/challenges/domain/challenges_db.dart';
 import 'user/domain/user.dart';
 
 part 'all_data_provider.g.dart';
