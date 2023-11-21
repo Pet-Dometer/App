@@ -50,6 +50,7 @@ flutter:
     - assets/images/bird.png
     - assets/images/splash.png
     - assets/images/logo.png
+    - assets/initialData/
 dev_dependencies:
   # the code generator
   riverpod_generator:
