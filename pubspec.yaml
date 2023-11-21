@@ -25,7 +25,7 @@ dependencies:
   riverpod:
   # the annotation package containing @riverpod
   riverpod_annotation:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
   firebase_core: ^2.22.0
   firebase_auth: ^4.13.0
   cloud_firestore: ^4.13.0

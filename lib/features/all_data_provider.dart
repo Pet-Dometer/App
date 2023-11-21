@@ -3,7 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'pet/data/pet_provider.dart';
 import 'user/data/user_providers.dart';
-// import 'challenges/data/challenges_provider.dart';
+import 'challenges/data/challenges_provider.dart';
 import 'user/domain/user.dart';
 
 part 'all_data_provider.g.dart';
@@ -15,12 +15,12 @@ class AllData {
       {
         required this.users,
         required this.pets,
-        // required this.challenges,
+        required this.challenges,
         required this.currentUserID});
 
   final List<User> users;
   final List<Pet> pets;
-  // final List<Challenge> challenges;
+  final List<Challenges> challenges;
   final String currentUserID;
 }
 
@@ -28,11 +28,11 @@ class AllData {
 Future<AllData> allData(AllDataRef ref) async {
   final users = ref.watch(usersProvider.future);
   final pets = ref.watch(petsProvider.future);
-  // final challenges = ref.watch(challengesProvider.future);
+  final challenges = ref.watch(challengesProvider.future);
   final currentUserID = ref.watch(currentUserIDProvider);
   return AllData(
       users: await users,
       pets: await pets,
-      // challenges: await challenges,
+      challenges: await challenges,
       currentUserID: currentUserID);
 }

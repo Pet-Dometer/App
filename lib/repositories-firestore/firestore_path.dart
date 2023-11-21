@@ -4,4 +4,6 @@ class FirestorePath {
   static String users() => 'users';
   static String pet(String userID) => 'pets/$userID';
   static String pets() => 'users';
+  static String challenges() => 'users';
+  static String challenge(String challengeID) => 'users';
 }

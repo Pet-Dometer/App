@@ -16,16 +16,8 @@ class ChallengesDatabase {
       path: FirestorePath.challenges(),
       builder: (data, documentId) => Challenges.fromJson(data!));
 
-  Stream<Challenges> watchChallenge(String petId) => _service.watchDocument(
-      path: FirestorePath.challenges(challengeId),
-      builder: (data, documentId) => Challenges.fromJson(data!));
-
   Future<List<Challenges>> fetchChallenges() => _service.fetchCollection(
       path: FirestorePath.challenges(),
-      builder: (data, documentId) => Challenges.fromJson(data!));
-
-  Future<Challenges> fetchChallenge(String petId) => _service.fetchDocument(
-      path: FirestorePath.challenge(challengeId),
       builder: (data, documentId) => Challenges.fromJson(data!));
 
   Future<void> setchallenge(Challenges challenge) => _service.setData(
