@@ -8,8 +8,6 @@ part 'user.g.dart';
 class User with _$User {
   const factory User({
     required String id,
-    required String email,
-    required String password,
 }) = _User;
 
   const User._();
@@ -22,17 +20,4 @@ class User with _$User {
     List<dynamic> initialData = json.decode(content);
     return initialData.map((jsonData) => User.fromJson(jsonData)).toList();
   }
-}
-
-/// The data associated with users.
-class UserData {
-  UserData({
-    required this.id,
-    required this.email,
-    required this.password,
-  });
-
-  String id;
-  String email;
-  String password;
 }

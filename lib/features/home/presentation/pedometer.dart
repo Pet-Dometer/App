@@ -29,8 +29,8 @@ class PedometerView extends ConsumerWidget {
   required String currentUserID,
   required List<Pet> pets}) {
     Pet currentPet = PetCollection(pets).getPet(currentUserID);
-    int calories = currentPet.calories;
-    int miles = currentPet.miles;
+    int calories = currentPet.getCalories();
+    int miles = currentPet.getMiles();
     return Scaffold(
       body: SafeArea(
         child: ListView(
