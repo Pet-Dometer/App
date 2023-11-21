@@ -12,9 +12,13 @@ _$PetImpl _$$PetImplFromJson(Map<String, dynamic> json) => _$PetImpl(
       petName: json['petName'] as String,
       background: json['background'] as String,
       type: json['type'] as String,
+      healthBar: json['healthBar'] as int,
+      moodBar: json['moodBar'] as int,
       steps: json['steps'] as int,
       currSteps: json['currSteps'] as int,
       stepGoal: json['stepGoal'] as int,
+      calories: json['calories'] as int,
+      miles: json['miles'] as int,
     );
 
 Map<String, dynamic> _$$PetImplToJson(_$PetImpl instance) => <String, dynamic>{
@@ -23,7 +27,11 @@ Map<String, dynamic> _$$PetImplToJson(_$PetImpl instance) => <String, dynamic>{
       'petName': instance.petName,
       'background': instance.background,
       'type': instance.type,
+      'healthBar': instance.healthBar,
+      'moodBar': instance.moodBar,
       'steps': instance.steps,
       'currSteps': instance.currSteps,
       'stepGoal': instance.stepGoal,
+      'calories': instance.calories,
+      'miles': instance.miles,
     };

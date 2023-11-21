@@ -12,9 +12,13 @@ class Pet with _$Pet {
     required String petName,
     required String background,
     required String type,
+    required int healthBar,
+    required int moodBar,
     required int steps,
     required int currSteps,
     required int stepGoal,
+    required int calories,
+    required int miles,
   }) = _Pet;
 
   const Pet._();
@@ -31,7 +35,7 @@ class Pet with _$Pet {
 
   static Future<List<Pet>> checkInitialData() async {
     String content =
-    await rootBundle.loadString("assets/initialData/pets.json");
+    await rootBundle.loadString("assets/initialData/users.json");
     List<dynamic> initialData = json.decode(content);
     return initialData.map((jsonData) => Pet.fromJson(jsonData)).toList();
   }

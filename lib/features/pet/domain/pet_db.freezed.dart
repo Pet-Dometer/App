@@ -25,9 +25,13 @@ mixin _$Pet {
   String get petName => throw _privateConstructorUsedError;
   String get background => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
+  int get healthBar => throw _privateConstructorUsedError;
+  int get moodBar => throw _privateConstructorUsedError;
   int get steps => throw _privateConstructorUsedError;
   int get currSteps => throw _privateConstructorUsedError;
   int get stepGoal => throw _privateConstructorUsedError;
+  int get calories => throw _privateConstructorUsedError;
+  int get miles => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,9 +49,13 @@ abstract class $PetCopyWith<$Res> {
       String petName,
       String background,
       String type,
+      int healthBar,
+      int moodBar,
       int steps,
       int currSteps,
-      int stepGoal});
+      int stepGoal,
+      int calories,
+      int miles});
 }
 
 /// @nodoc
@@ -67,9 +75,13 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
     Object? petName = null,
     Object? background = null,
     Object? type = null,
+    Object? healthBar = null,
+    Object? moodBar = null,
     Object? steps = null,
     Object? currSteps = null,
     Object? stepGoal = null,
+    Object? calories = null,
+    Object? miles = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -92,6 +104,14 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      healthBar: null == healthBar
+          ? _value.healthBar
+          : healthBar // ignore: cast_nullable_to_non_nullable
+              as int,
+      moodBar: null == moodBar
+          ? _value.moodBar
+          : moodBar // ignore: cast_nullable_to_non_nullable
+              as int,
       steps: null == steps
           ? _value.steps
           : steps // ignore: cast_nullable_to_non_nullable
@@ -103,6 +123,14 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
       stepGoal: null == stepGoal
           ? _value.stepGoal
           : stepGoal // ignore: cast_nullable_to_non_nullable
+              as int,
+      calories: null == calories
+          ? _value.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as int,
+      miles: null == miles
+          ? _value.miles
+          : miles // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -120,9 +148,13 @@ abstract class _$$PetImplCopyWith<$Res> implements $PetCopyWith<$Res> {
       String petName,
       String background,
       String type,
+      int healthBar,
+      int moodBar,
       int steps,
       int currSteps,
-      int stepGoal});
+      int stepGoal,
+      int calories,
+      int miles});
 }
 
 /// @nodoc
@@ -139,9 +171,13 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
     Object? petName = null,
     Object? background = null,
     Object? type = null,
+    Object? healthBar = null,
+    Object? moodBar = null,
     Object? steps = null,
     Object? currSteps = null,
     Object? stepGoal = null,
+    Object? calories = null,
+    Object? miles = null,
   }) {
     return _then(_$PetImpl(
       id: null == id
@@ -164,6 +200,14 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
+      healthBar: null == healthBar
+          ? _value.healthBar
+          : healthBar // ignore: cast_nullable_to_non_nullable
+              as int,
+      moodBar: null == moodBar
+          ? _value.moodBar
+          : moodBar // ignore: cast_nullable_to_non_nullable
+              as int,
       steps: null == steps
           ? _value.steps
           : steps // ignore: cast_nullable_to_non_nullable
@@ -175,6 +219,14 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
       stepGoal: null == stepGoal
           ? _value.stepGoal
           : stepGoal // ignore: cast_nullable_to_non_nullable
+              as int,
+      calories: null == calories
+          ? _value.calories
+          : calories // ignore: cast_nullable_to_non_nullable
+              as int,
+      miles: null == miles
+          ? _value.miles
+          : miles // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -189,9 +241,13 @@ class _$PetImpl extends _Pet {
       required this.petName,
       required this.background,
       required this.type,
+      required this.healthBar,
+      required this.moodBar,
       required this.steps,
       required this.currSteps,
-      required this.stepGoal})
+      required this.stepGoal,
+      required this.calories,
+      required this.miles})
       : super._();
 
   factory _$PetImpl.fromJson(Map<String, dynamic> json) =>
@@ -208,15 +264,23 @@ class _$PetImpl extends _Pet {
   @override
   final String type;
   @override
+  final int healthBar;
+  @override
+  final int moodBar;
+  @override
   final int steps;
   @override
   final int currSteps;
   @override
   final int stepGoal;
+  @override
+  final int calories;
+  @override
+  final int miles;
 
   @override
   String toString() {
-    return 'Pet(id: $id, ownerID: $ownerID, petName: $petName, background: $background, type: $type, steps: $steps, currSteps: $currSteps, stepGoal: $stepGoal)';
+    return 'Pet(id: $id, ownerID: $ownerID, petName: $petName, background: $background, type: $type, healthBar: $healthBar, moodBar: $moodBar, steps: $steps, currSteps: $currSteps, stepGoal: $stepGoal, calories: $calories, miles: $miles)';
   }
 
   @override
@@ -230,17 +294,23 @@ class _$PetImpl extends _Pet {
             (identical(other.background, background) ||
                 other.background == background) &&
             (identical(other.type, type) || other.type == type) &&
+            (identical(other.healthBar, healthBar) ||
+                other.healthBar == healthBar) &&
+            (identical(other.moodBar, moodBar) || other.moodBar == moodBar) &&
             (identical(other.steps, steps) || other.steps == steps) &&
             (identical(other.currSteps, currSteps) ||
                 other.currSteps == currSteps) &&
             (identical(other.stepGoal, stepGoal) ||
-                other.stepGoal == stepGoal));
+                other.stepGoal == stepGoal) &&
+            (identical(other.calories, calories) ||
+                other.calories == calories) &&
+            (identical(other.miles, miles) || other.miles == miles));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, ownerID, petName, background,
-      type, steps, currSteps, stepGoal);
+      type, healthBar, moodBar, steps, currSteps, stepGoal, calories, miles);
 
   @JsonKey(ignore: true)
   @override
@@ -263,9 +333,13 @@ abstract class _Pet extends Pet {
       required final String petName,
       required final String background,
       required final String type,
+      required final int healthBar,
+      required final int moodBar,
       required final int steps,
       required final int currSteps,
-      required final int stepGoal}) = _$PetImpl;
+      required final int stepGoal,
+      required final int calories,
+      required final int miles}) = _$PetImpl;
   const _Pet._() : super._();
 
   factory _Pet.fromJson(Map<String, dynamic> json) = _$PetImpl.fromJson;
@@ -281,11 +355,19 @@ abstract class _Pet extends Pet {
   @override
   String get type;
   @override
+  int get healthBar;
+  @override
+  int get moodBar;
+  @override
   int get steps;
   @override
   int get currSteps;
   @override
   int get stepGoal;
+  @override
+  int get calories;
+  @override
+  int get miles;
   @override
   @JsonKey(ignore: true)
   _$$PetImplCopyWith<_$PetImpl> get copyWith =>

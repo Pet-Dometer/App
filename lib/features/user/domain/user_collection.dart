@@ -19,12 +19,12 @@ class UserCollection {
 
   String getUserID(String emailOrUsername) {
     return _users
-        .firstWhere((userData) => userData.id == emailOrUsername)
+        .firstWhere((userData) => userData.email == emailOrUsername)
         .id;
   }
 
   bool isUserEmail(String email) {
-    List<String> emails = _users.map((userData) => userData.id).toList();
+    List<String> emails = _users.map((userData) => userData.email).toList();
     return emails.contains(email);
   }
 }
