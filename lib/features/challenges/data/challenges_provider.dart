@@ -1,5 +1,5 @@
-import 'package:app/features/pet/data/challenges_database.dart';
-import 'package:app/features/pet/domain/pet_db.dart';
+import 'package:app/features/challenges/data/challenges_database.dart';
+import 'package:app/features/challenges/domain/challenges_db.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'challenges_provider.g.dart';
 

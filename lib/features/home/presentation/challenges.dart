@@ -12,9 +12,9 @@ class ChallengeView extends StatefulWidget {
 }
 
 class _ChallengeState extends State<ChallengeView> {
-  ChallengeData sample1 = ChallengesDB().getChallenge('challenge-001');
-  ChallengeData sample2 = ChallengesDB().getChallenge('challenge-002');
-  ChallengeData sample3 = ChallengesDB().getChallenge('challenge-003');
+  // ChallengeData sample1 = ChallengesDB().getChallenge('challenge-001');
+  // ChallengeData sample2 = ChallengesDB().getChallenge('challenge-002');
+  // ChallengeData sample3 = ChallengesDB().getChallenge('challenge-003');
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,9 @@ class _ChallengeState extends State<ChallengeView> {
                 'Challenges',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
-              Details(sample1.challenge, sample1.frequency, sample1.complete),
-              Details(sample2.challenge, sample2.frequency, sample2.complete),
-              Details(sample3.challenge, sample3.frequency, sample3.complete),
+              // Details(sample1.challenge, sample1.frequency, sample1.complete),
+              // Details(sample2.challenge, sample2.frequency, sample2.complete),
+              // Details(sample3.challenge, sample3.frequency, sample3.complete),
             ],
           ),
         ),

@@ -12,19 +12,19 @@ class ChallengesDatabase {
 
   final _service = FirestoreService.instance;
 
-  Stream<List<Pet>> watchChallenges() => _service.watchCollection(
+  Stream<List<Challenges>> watchChallenges() => _service.watchCollection(
       path: FirestorePath.challenges(),
       builder: (data, documentId) => Challenges.fromJson(data!));
 
-  Stream<Pet> watchChallenge(String petId) => _service.watchDocument(
+  Stream<Challenges> watchChallenge(String petId) => _service.watchDocument(
       path: FirestorePath.challenges(challengeId),
       builder: (data, documentId) => Challenges.fromJson(data!));
 
-  Future<List<Pet>> fetchChallenges() => _service.fetchCollection(
+  Future<List<Challenges>> fetchChallenges() => _service.fetchCollection(
       path: FirestorePath.challenges(),
-      builder: (data, documentId) => Pet.fromJson(data!));
+      builder: (data, documentId) => Challenges.fromJson(data!));
 
-  Future<Pet> fetchChallenge(String petId) => _service.fetchDocument(
+  Future<Challenges> fetchChallenge(String petId) => _service.fetchDocument(
       path: FirestorePath.challenge(challengeId),
       builder: (data, documentId) => Challenges.fromJson(data!));
 

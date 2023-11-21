@@ -9,22 +9,22 @@ part 'challenges_db.g.dart';
 @Freezed()
 class Challenges with _$Challenges {
   const factory Challenges({
-    required this.id,
-    required this.frequency,
-    required this.challenge,
-    required this.complete,
+    required String id,
+    required String frequency,
+    required String challenge,
+    required bool complete,
   }) = _Challenges;
 
-  // const Challenges._();
+  const Challenges._();
 
   factory Challenges.fromJson(Map<String, dynamic> json) => _$ChallengesFromJson(json);
 
-  // static Future<List<Challenges>> checkInitialData() async {
-  // String content =
-  // await rootBundle.loadString("assets/initialData/challenges.json");
-  // List<dynamic> initialData = json.decode(content);
-  // return initialData.map((jsonData) => Challenges.fromJson(jsonData)).toList();
-  // }
+  static Future<List<Challenges>> checkInitialData() async {
+  String content =
+  await rootBundle.loadString("assets/initialData/challenges.json");
+  List<dynamic> initialData = json.decode(content);
+  return initialData.map((jsonData) => Challenges.fromJson(jsonData)).toList();
+  }
 }
 
 /// Provides access to and operations on all defined users.
