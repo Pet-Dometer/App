@@ -1,0 +1,20 @@
+[
+  {
+    "id": "challenge-001",
+    "frequency": "Daily",
+    "challenge": "Walk 10k steps",
+    "complete": false
+  },
+  {
+    "id": "challenge-002",
+    "frequency": "Weekly",
+    "challenge": "Walk 70k steps",
+    "complete": true
+  },
+  {
+    "id": "challenge-002",
+    "frequency": "Weekly",
+    "challenge": "Walk 70k steps",
+    "complete": true
+  }
+]
