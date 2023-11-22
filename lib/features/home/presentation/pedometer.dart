@@ -24,10 +24,11 @@ class PedometerView extends ConsumerWidget {
         error: (error, st) => PedError(error.toString(), st.toString()));
   }
 
-  @override
   Widget _build({required BuildContext context,
   required String currentUserID,
   required List<Pet> pets}) {
+    print("working");
+
     Pet currentPet = PetCollection(pets).getPet(currentUserID);
     int calories = currentPet.getCalories();
     int miles = currentPet.getMiles();

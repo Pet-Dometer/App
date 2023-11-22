@@ -16,8 +16,8 @@
 15-->C:\GitHub\app\android\app\src\debug\AndroidManifest.xml:6:5-66
 15-->C:\GitHub\app\android\app\src\debug\AndroidManifest.xml:6:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->C:\GitHub\app\android\app\src\main\AndroidManifest.xml:2:5-79
-16-->C:\GitHub\app\android\app\src\main\AndroidManifest.xml:2:22-76
+16-->[com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:26:5-79
+16-->[com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:26:22-76
 17
 18    <application
 19        android:name="io.flutter.app.FlutterMultiDexApplication"
