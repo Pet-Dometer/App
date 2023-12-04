@@ -24,10 +24,10 @@ class PedometerView extends ConsumerWidget {
         error: (error, st) => PedError(error.toString(), st.toString()));
   }
 
-  Widget _build({required BuildContext context,
-  required String currentUserID,
-  required List<Pet> pets}) {
-    print("working");
+  Widget _build(
+      {required BuildContext context,
+      required String currentUserID,
+      required List<Pet> pets}) {
 
     Pet currentPet = PetCollection(pets).getPet(currentUserID);
     int calories = currentPet.getCalories();
@@ -40,7 +40,8 @@ class PedometerView extends ConsumerWidget {
               height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/background.png'), fit: BoxFit.fill),
+                    image: AssetImage('assets/images/background.png'),
+                    fit: BoxFit.fill),
               ),
               child: Column(
                 children: [
@@ -75,7 +76,8 @@ class PedometerView extends ConsumerWidget {
                         Center(
                           child: Text(
                             '$calories',
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
                         const SizedBox(
@@ -90,7 +92,8 @@ class PedometerView extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(width: 30),
-                    ProgressCircle('Steps', .5, currentPet.steps, currentPet.currSteps, currentPet.stepGoal),
+                    ProgressCircle('Steps', .5, currentPet.steps,
+                        currentPet.currSteps, currentPet.stepGoal),
                     const SizedBox(width: 30),
                     Column(
                       children: [
@@ -100,7 +103,8 @@ class PedometerView extends ConsumerWidget {
                         Center(
                           child: Text(
                             '$miles',
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
                         const SizedBox(
