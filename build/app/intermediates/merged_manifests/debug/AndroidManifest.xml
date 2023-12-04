@@ -19,7 +19,6 @@
         android:name="io.flutter.app.FlutterMultiDexApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="app" >
         <activity
             android:name="com.example.app.MainActivity"
