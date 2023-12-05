@@ -8,7 +8,7 @@ import '../../all_data_provider.dart';
 import '../../pedometer/presentation/pedometer_circles.dart';
 
 class PedometerView extends ConsumerWidget {
-  const PedometerView({Key? key}) : super(key: key);
+  const PedometerView({super.key});
 
   static const routeName = '/pedometer';
 
@@ -29,9 +29,11 @@ class PedometerView extends ConsumerWidget {
       required String currentUserID,
       required List<Pet> pets}) {
 
+    currentUserID = '123';
     Pet currentPet = PetCollection(pets).getPet(currentUserID);
     int calories = currentPet.getCalories();
     int miles = currentPet.getMiles();
+
     return Scaffold(
       body: SafeArea(
         child: ListView(

@@ -1,3 +1,4 @@
+import 'package:app/features/home/presentation/pedometer.dart';
 import 'package:app/features/settings/presentation/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:app/features/home/presentation/challenges.dart';
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
                 return const HistoryView();
               case HomeView.routeName:
                 return HomeView();
+              case PedometerView.routeName:
+                return const PedometerView();
               case SettingsPageView.routeName:
                 return const SettingsPageView();
               case ForgotPasswordView.routeName:
