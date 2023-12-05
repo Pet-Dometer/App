@@ -20,7 +20,7 @@
 16-->[com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:22-76
 17
 18    <application
-19        android:name="io.flutter.app.FlutterMultiDexApplication"
+19        android:name="android.app.Application"
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.6.0] C:\Users\the80\.gradle\caches\transforms-3\66553c2695715a53f8ac62f8b06a50f8\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 21        android:debuggable="true"

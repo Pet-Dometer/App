@@ -14,6 +14,7 @@ class PedometerView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+/*
     final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
     return asyncAllData.when(
         data: (allData) => _build(
@@ -33,6 +34,7 @@ class PedometerView extends ConsumerWidget {
     Pet currentPet = PetCollection(pets).getPet(currentUserID);
     int calories = currentPet.getCalories();
     int miles = currentPet.getMiles();
+*/
 
     return Scaffold(
       body: SafeArea(
@@ -51,7 +53,7 @@ class PedometerView extends ConsumerWidget {
                     alignment: Alignment.center,
                     height: 40.0,
                     child: Text(
-                      currentPet.petName,
+                      'Mugi', //currentPet.petName,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
@@ -77,7 +79,7 @@ class PedometerView extends ConsumerWidget {
                         ),
                         Center(
                           child: Text(
-                            '$calories',
+                            '100',//'$calories',
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),
@@ -94,8 +96,8 @@ class PedometerView extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(width: 30),
-                    ProgressCircle('Steps', .5, currentPet.steps,
-                        currentPet.currSteps, currentPet.stepGoal),
+                    ProgressCircle('Steps', .5, 100,//currentPet.steps,
+                        100, 100/*currentPet.currSteps, currentPet.stepGoal*/),
                     const SizedBox(width: 30),
                     Column(
                       children: [
@@ -104,7 +106,7 @@ class PedometerView extends ConsumerWidget {
                         ),
                         Center(
                           child: Text(
-                            '$miles',
+                            '100',//'$miles',
                             style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),

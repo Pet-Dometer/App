@@ -26,6 +26,8 @@ Future<AllData> allData(AllDataRef ref) async {
   final users = ref.watch(usersProvider.future);
   final pets = ref.watch(petsProvider.future);
   final currentUserID = ref.watch(currentUserIDProvider);
+
+  print(currentUserID);
   return AllData(
       users: await users,
       pets: await pets,
