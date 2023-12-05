@@ -9,8 +9,8 @@ MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-17:19
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:28:5-73:19
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:13:5-24:19
 MERGED from [com.google.firebase:firebase-dynamic-links:21.2.0] C:\Users\the80\.gradle\caches\transforms-3\c1f36856f45436553ab9bc32885dfb80\transformed\jetified-firebase-dynamic-links-21.2.0\AndroidManifest.xml:20:5-31:19
@@ -54,7 +54,7 @@ MERGED from [:cloud_firestore] C:\GitHub\app\build\cloud_firestore\intermediates
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-dynamic-links:21.2.0] C:\Users\the80\.gradle\caches\transforms-3\c1f36856f45436553ab9bc32885dfb80\transformed\jetified-firebase-dynamic-links-21.2.0\AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\the80\.gradle\caches\transforms-3\e68068fe0de5b3096ef5f8615747b891\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:2:1-18:12
@@ -124,8 +124,8 @@ MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\mer
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-dynamic-links:21.2.0] C:\Users\the80\.gradle\caches\transforms-3\c1f36856f45436553ab9bc32885dfb80\transformed\jetified-firebase-dynamic-links-21.2.0\AndroidManifest.xml:18:5-44
@@ -205,7 +205,7 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\the80\.
 INJECTED from C:\GitHub\app\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\GitHub\app\android\app\src\debug\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:23:9-61
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
 		INJECTED from C:\GitHub\app\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\GitHub\app\android\app\src\debug\AndroidManifest.xml
@@ -216,8 +216,8 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\GitHub\app\android\app\src\debug\AndroidManifest.xml:6:5-66
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\the80\.gradle\caches\transforms-3\9cff37238fd5b63951677a6af28a6adc\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:7:5-67
@@ -232,8 +232,8 @@ MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-16:19
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:14:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:14:9-23:19
 MERGED from [com.google.firebase:firebase-dynamic-links:21.2.0] C:\Users\the80\.gradle\caches\transforms-3\c1f36856f45436553ab9bc32885dfb80\transformed\jetified-firebase-dynamic-links-21.2.0\AndroidManifest.xml:21:9-30:19
@@ -243,7 +243,7 @@ MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\the80\.gra
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\the80\.gradle\caches\transforms-3\9e58925ec40afd34d73876cd9ee39dbd\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:30:9-38:19
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\the80\.gradle\caches\transforms-3\9e58925ec40afd34d73876cd9ee39dbd\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:30:9-38:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:68:13-37
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:68:13-37
 	tools:targetApi
 		ADDED from [com.google.firebase:firebase-common:20.4.2] C:\Users\the80\.gradle\caches\transforms-3\9e58925ec40afd34d73876cd9ee39dbd\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:34:13-32
 	android:directBootAware
@@ -275,7 +275,7 @@ ADDED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merg
 	android:name
 		ADDED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:26:5-79
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:10:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\the80\.gradle\caches\transforms-3\9cff37238fd5b63951677a6af28a6adc\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
@@ -283,61 +283,61 @@ MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\the80\.grad
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\the80\.gradle\caches\transforms-3\f9df27f8746281b50f9cd222f213086c\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\the80\.gradle\caches\transforms-3\f9df27f8746281b50f9cd222f213086c\transformed\jetified-grpc-android-1.52.1\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:26:22-76
 activity#com.google.firebase.auth.internal.GenericIdpActivity
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:29:9-46:20
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:31:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:31:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:33:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:33:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:32:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:32:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:34:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:34:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:30:13-80
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:35:13-45:29
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:35:13-45:29
 action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:36:17-69
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:36:25-66
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:36:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:38:17-76
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:38:27-73
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:38:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:39:17-78
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:39:27-75
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:39:27-75
 data
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:41:17-44:51
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:41:17-44:51
 	android:path
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:43:21-37
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:43:21-37
 	android:host
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:42:21-49
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:42:21-49
 	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:44:21-48
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:47:9-64:20
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:49:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:49:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:51:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:51:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:50:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:52:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:52:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:48:13-79
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:48:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:53:13-63:29
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:53:13-63:29
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:69:13-71:85
+ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:69:13-71:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:71:17-82
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:71:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\the80\.gradle\caches\transforms-3\b19e3efd84f9685a4f62ab263596ff70\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:70:17-109
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:70:17-109
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
 ADDED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:17:13-19:85
 	android:value
