@@ -14,27 +14,22 @@ class PedometerView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-/*
     final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
+    print(asyncAllData.hasValue);
     return asyncAllData.when(
         data: (allData) => _build(
             context: context,
-            currentUserID: allData.currentUserID,
-            pets: allData.pets),
+            currentUserID: allData.currentUserID),
         loading: () => const PedLoading(),
         error: (error, st) => PedError(error.toString(), st.toString()));
   }
 
   Widget _build(
       {required BuildContext context,
-      required String currentUserID,
-      required List<Pet> pets}) {
+      required String currentUserID,}) {
 
+    print('hi');
     currentUserID = '123';
-    Pet currentPet = PetCollection(pets).getPet(currentUserID);
-    int calories = currentPet.getCalories();
-    int miles = currentPet.getMiles();
-*/
 
     return Scaffold(
       body: SafeArea(

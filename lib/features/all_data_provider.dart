@@ -7,14 +7,9 @@ import 'user/domain/user.dart';
 
 part 'all_data_provider.g.dart';
 
-// Based on: https://stackoverflow.com/questions/69929734/combining-futureproviders-using-a-futureprovider-riverpod
-
 class AllData {
   AllData(
-      {
-        required this.users,
-        required this.pets,
-        required this.currentUserID});
+      {required this.users, required this.pets, required this.currentUserID});
 
   final List<User> users;
   final List<Pet> pets;
@@ -27,9 +22,7 @@ Future<AllData> allData(AllDataRef ref) async {
   final pets = ref.watch(petsProvider.future);
   final currentUserID = ref.watch(currentUserIDProvider);
 
-  print(currentUserID);
+  print("current userID: $currentUserID");
   return AllData(
-      users: await users,
-      pets: await pets,
-      currentUserID: currentUserID);
+      users: await users, pets: await pets, currentUserID: currentUserID);
 }
