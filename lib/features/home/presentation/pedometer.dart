@@ -52,7 +52,7 @@ class PedometerView extends ConsumerWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  Image.asset('assets/images/happy_dog.jpg', width: 300),
+                  Image.asset('assets/images/sad_dog.png', width: 300),
                 ],
               ),
             ),
@@ -61,28 +61,28 @@ class PedometerView extends ConsumerWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 20),
-                Image.asset('assets/images/healthbar.png', width: 150),
+                Image.asset('assets/images/healthbar_empty.png', width: 150),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Column(
+                    const Column(
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           height: 25,
                         ),
                         Center(
                           child: Text(
-                            '100',//'$calories',
-                            style: const TextStyle(
+                            '231', //'$calories',
+                            style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 45,
                         ),
-                        const Center(
+                        Center(
                           child: Text(
                             'Calories',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -91,25 +91,29 @@ class PedometerView extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(width: 30),
-                    ProgressCircle('Steps', .5, 100,//currentPet.steps,
-                        100, 100/*currentPet.currSteps, currentPet.stepGoal*/),
+                    ProgressCircle(
+                        'Steps',
+                        .5,
+                        1543, //currentPet.steps,
+                        0,
+                        7000 /*currentPet.currSteps, currentPet.stepGoal*/),
                     const SizedBox(width: 30),
-                    Column(
+                    const Column(
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           height: 25,
                         ),
                         Center(
                           child: Text(
-                            '100',//'$miles',
-                            style: const TextStyle(
+                            '6', //'$miles',
+                            style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: 45,
                         ),
-                        const Center(
+                        Center(
                           child: Text(
                             'Miles',
                             style: TextStyle(fontWeight: FontWeight.bold),
