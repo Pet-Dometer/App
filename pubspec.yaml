@@ -48,6 +48,8 @@ flutter:
     - assets/images/bird.png
     - assets/images/splash.png
     - assets/images/logo.png
+    - assets/images/happy_dog.jpg
+    - assets/images/sad_dog.jpg
     - assets/initialData/
 dev_dependencies:
   riverpod_generator:
