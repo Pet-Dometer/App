@@ -15,6 +15,7 @@ class PedometerView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
+    print(asyncAllData.hasValue);
     return asyncAllData.when(
         data: (allData) => _build(
             context: context,
@@ -41,9 +42,9 @@ class PedometerView extends ConsumerWidget {
           children: <Widget>[
             Container(
               height: 400,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/background.png'),
+                    image: AssetImage(currentPet.background),
                     fit: BoxFit.fill),
               ),
               child: Column(
@@ -56,7 +57,7 @@ class PedometerView extends ConsumerWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  Image.asset('assets/images/sad_dog.png', width: 300),
+                  Image.asset(currentPet.petImage, width: 300),
                 ],
               ),
             ),
@@ -65,7 +66,7 @@ class PedometerView extends ConsumerWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 20),
-                Image.asset('assets/images/healthbar_empty.png', width: 150),
+                Image.asset(currentPet.healthBar, width: 150),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisSize: MainAxisSize.min,

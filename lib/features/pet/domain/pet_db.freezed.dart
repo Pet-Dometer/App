@@ -24,7 +24,8 @@ mixin _$Pet {
   String get ownerID => throw _privateConstructorUsedError;
   String get petName => throw _privateConstructorUsedError;
   String get background => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
+  String get petImage => throw _privateConstructorUsedError;
+  String get healthBar => throw _privateConstructorUsedError;
   int get steps => throw _privateConstructorUsedError;
   int get currSteps => throw _privateConstructorUsedError;
   int get stepGoal => throw _privateConstructorUsedError;
@@ -44,7 +45,8 @@ abstract class $PetCopyWith<$Res> {
       String ownerID,
       String petName,
       String background,
-      String type,
+      String petImage,
+      String healthBar,
       int steps,
       int currSteps,
       int stepGoal});
@@ -66,7 +68,8 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
     Object? ownerID = null,
     Object? petName = null,
     Object? background = null,
-    Object? type = null,
+    Object? petImage = null,
+    Object? healthBar = null,
     Object? steps = null,
     Object? currSteps = null,
     Object? stepGoal = null,
@@ -88,9 +91,13 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
           ? _value.background
           : background // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      petImage: null == petImage
+          ? _value.petImage
+          : petImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      healthBar: null == healthBar
+          ? _value.healthBar
+          : healthBar // ignore: cast_nullable_to_non_nullable
               as String,
       steps: null == steps
           ? _value.steps
@@ -119,7 +126,8 @@ abstract class _$$PetImplCopyWith<$Res> implements $PetCopyWith<$Res> {
       String ownerID,
       String petName,
       String background,
-      String type,
+      String petImage,
+      String healthBar,
       int steps,
       int currSteps,
       int stepGoal});
@@ -138,7 +146,8 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
     Object? ownerID = null,
     Object? petName = null,
     Object? background = null,
-    Object? type = null,
+    Object? petImage = null,
+    Object? healthBar = null,
     Object? steps = null,
     Object? currSteps = null,
     Object? stepGoal = null,
@@ -160,9 +169,13 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
           ? _value.background
           : background // ignore: cast_nullable_to_non_nullable
               as String,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      petImage: null == petImage
+          ? _value.petImage
+          : petImage // ignore: cast_nullable_to_non_nullable
+              as String,
+      healthBar: null == healthBar
+          ? _value.healthBar
+          : healthBar // ignore: cast_nullable_to_non_nullable
               as String,
       steps: null == steps
           ? _value.steps
@@ -188,7 +201,8 @@ class _$PetImpl extends _Pet {
       required this.ownerID,
       required this.petName,
       required this.background,
-      required this.type,
+      required this.petImage,
+      required this.healthBar,
       required this.steps,
       required this.currSteps,
       required this.stepGoal})
@@ -206,7 +220,9 @@ class _$PetImpl extends _Pet {
   @override
   final String background;
   @override
-  final String type;
+  final String petImage;
+  @override
+  final String healthBar;
   @override
   final int steps;
   @override
@@ -216,7 +232,7 @@ class _$PetImpl extends _Pet {
 
   @override
   String toString() {
-    return 'Pet(id: $id, ownerID: $ownerID, petName: $petName, background: $background, type: $type, steps: $steps, currSteps: $currSteps, stepGoal: $stepGoal)';
+    return 'Pet(id: $id, ownerID: $ownerID, petName: $petName, background: $background, petImage: $petImage, healthBar: $healthBar, steps: $steps, currSteps: $currSteps, stepGoal: $stepGoal)';
   }
 
   @override
@@ -229,7 +245,10 @@ class _$PetImpl extends _Pet {
             (identical(other.petName, petName) || other.petName == petName) &&
             (identical(other.background, background) ||
                 other.background == background) &&
-            (identical(other.type, type) || other.type == type) &&
+            (identical(other.petImage, petImage) ||
+                other.petImage == petImage) &&
+            (identical(other.healthBar, healthBar) ||
+                other.healthBar == healthBar) &&
             (identical(other.steps, steps) || other.steps == steps) &&
             (identical(other.currSteps, currSteps) ||
                 other.currSteps == currSteps) &&
@@ -240,7 +259,7 @@ class _$PetImpl extends _Pet {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, ownerID, petName, background,
-      type, steps, currSteps, stepGoal);
+      petImage, healthBar, steps, currSteps, stepGoal);
 
   @JsonKey(ignore: true)
   @override
@@ -262,7 +281,8 @@ abstract class _Pet extends Pet {
       required final String ownerID,
       required final String petName,
       required final String background,
-      required final String type,
+      required final String petImage,
+      required final String healthBar,
       required final int steps,
       required final int currSteps,
       required final int stepGoal}) = _$PetImpl;
@@ -279,7 +299,9 @@ abstract class _Pet extends Pet {
   @override
   String get background;
   @override
-  String get type;
+  String get petImage;
+  @override
+  String get healthBar;
   @override
   int get steps;
   @override
