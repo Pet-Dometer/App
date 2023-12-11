@@ -14,7 +14,7 @@ class PedometerView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-/*    final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
+    final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
     print(asyncAllData.hasValue);
     return asyncAllData.when(
         data: (allData) => _build(
@@ -29,7 +29,7 @@ class PedometerView extends ConsumerWidget {
       required String currentUserID,}) {
 
     print('hi');
-    currentUserID = '123';*/
+    currentUserID = '123';
 
     return Scaffold(
       body: SafeArea(
