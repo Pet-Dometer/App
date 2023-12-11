@@ -22,7 +22,6 @@ Future<AllData> allData(AllDataRef ref) async {
   final pets = ref.watch(petsProvider.future);
   final currentUserID = ref.watch(currentUserIDProvider);
 
-  print("current userID: $currentUserID");
   return AllData(
       users: await users, pets: await pets, currentUserID: currentUserID);
 }

@@ -15,7 +15,6 @@ class PedometerView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<AllData> asyncAllData = ref.watch(allDataProvider);
-    print(asyncAllData.hasValue);
     return asyncAllData.when(
         data: (allData) => _build(
             context: context,
@@ -28,9 +27,7 @@ class PedometerView extends ConsumerWidget {
       {required BuildContext context,
       required String currentUserID,}) {
 
-    print('hi');
-    currentUserID = '123';
-
+    
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -48,7 +45,7 @@ class PedometerView extends ConsumerWidget {
                     alignment: Alignment.center,
                     height: 40.0,
                     child: Text(
-                      'Mugi', //currentPet.petName,
+                      currentPet.petName,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
