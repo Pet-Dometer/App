@@ -54,6 +54,7 @@ MERGED from [:cloud_firestore] C:\GitHub\app\build\cloud_firestore\intermediates
 MERGED from [:firebase_dynamic_links] C:\GitHub\app\build\firebase_dynamic_links\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\the80\.gradle\caches\transforms-3\a5efb933572d1c532f17ca2f6025739b\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-dynamic-links:21.2.0] C:\Users\the80\.gradle\caches\transforms-3\c1f36856f45436553ab9bc32885dfb80\transformed\jetified-firebase-dynamic-links-21.2.0\AndroidManifest.xml:15:1-33:12
@@ -63,7 +64,6 @@ MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\the80\.gradle\
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\the80\.gradle\caches\transforms-3\9cff37238fd5b63951677a6af28a6adc\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:2:1-10:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\the80\.gradle\caches\transforms-3\bd98c0a8d9febbce430dc04bbaae3d88\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\the80\.gradle\caches\transforms-3\487e4100932392ebc0ae2d3f23f50136\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\the80\.gradle\caches\transforms-3\1bd11eef1fa064385f96482101ed4778\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\the80\.gradle\caches\transforms-3\e52fcb390ea7dd0746eadb4267744f04\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\the80\.gradle\caches\transforms-3\090ca97122b6108c689bdd8020ee8e84\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\the80\.gradle\caches\transforms-3\6b66fa40868bb47c76a23f1bb3416270\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
@@ -124,6 +124,8 @@ MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\mer
 MERGED from [:firebase_core] C:\GitHub\app\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:desktop_webview_auth] C:\GitHub\app\build\desktop_webview_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\the80\.gradle\caches\transforms-3\a5efb933572d1c532f17ca2f6025739b\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\the80\.gradle\caches\transforms-3\a5efb933572d1c532f17ca2f6025739b\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\the80\.gradle\caches\transforms-3\cd0cc8a329a945934953860f2bdc210d\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-firestore:24.9.1] C:\Users\the80\.gradle\caches\transforms-3\c46421b0c44f9bbcb944f88dc97f42cc\transformed\jetified-firebase-firestore-24.9.1\AndroidManifest.xml:6:5-44
@@ -142,8 +144,6 @@ MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\the80\.gradle\ca
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\the80\.gradle\caches\transforms-3\bd98c0a8d9febbce430dc04bbaae3d88\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\the80\.gradle\caches\transforms-3\487e4100932392ebc0ae2d3f23f50136\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\the80\.gradle\caches\transforms-3\487e4100932392ebc0ae2d3f23f50136\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\the80\.gradle\caches\transforms-3\1bd11eef1fa064385f96482101ed4778\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\the80\.gradle\caches\transforms-3\1bd11eef1fa064385f96482101ed4778\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\the80\.gradle\caches\transforms-3\e52fcb390ea7dd0746eadb4267744f04\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\the80\.gradle\caches\transforms-3\e52fcb390ea7dd0746eadb4267744f04\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\the80\.gradle\caches\transforms-3\090ca97122b6108c689bdd8020ee8e84\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:4:5-44

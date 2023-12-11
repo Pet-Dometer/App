@@ -18,16 +18,23 @@ class PedometerView extends ConsumerWidget {
     return asyncAllData.when(
         data: (allData) => _build(
             context: context,
-            currentUserID: allData.currentUserID),
+            currentUserID: allData.currentUserID,
+            pets: allData.pets),
         loading: () => const PedLoading(),
         error: (error, st) => PedError(error.toString(), st.toString()));
   }
 
-  Widget _build(
-      {required BuildContext context,
-      required String currentUserID,}) {
+  Widget _build({
+    required BuildContext context,
+    required String currentUserID,
+    required List<Pet> pets,
+  }) {
 
-    
+    String currentPetID = PetCollection(pets).getAssociatedPetID(currentUserID);
+    Pet currentPet = PetCollection(pets).getPet(currentPetID);
+    int calories = currentPet.getCalories();
+    int miles = currentPet.getMiles();
+
     return Scaffold(
       body: SafeArea(
         child: ListView(
@@ -64,22 +71,22 @@ class PedometerView extends ConsumerWidget {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    const Column(
+                    Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Center(
                           child: Text(
-                            '231', //'$calories',
-                            style: TextStyle(
+                            '$calories',
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 45,
                         ),
-                        Center(
+                        const Center(
                           child: Text(
                             'Calories',
                             style: TextStyle(fontWeight: FontWeight.bold),
@@ -88,29 +95,25 @@ class PedometerView extends ConsumerWidget {
                       ],
                     ),
                     const SizedBox(width: 30),
-                    ProgressCircle(
-                        'Steps',
-                        .5,
-                        1543, //currentPet.steps,
-                        0,
-                        7000 /*currentPet.currSteps, currentPet.stepGoal*/),
+                    ProgressCircle('Steps', .5, currentPet.steps,
+                        currentPet.currSteps, currentPet.stepGoal),
                     const SizedBox(width: 30),
-                    const Column(
+                    Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Center(
                           child: Text(
-                            '6', //'$miles',
-                            style: TextStyle(
+                            '$miles',
+                            style: const TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 45,
                         ),
-                        Center(
+                        const Center(
                           child: Text(
                             'Miles',
                             style: TextStyle(fontWeight: FontWeight.bold),
